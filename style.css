@@ -1,0 +1,6968 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background:
+    radial-gradient(circle at 20% 10%, rgba(255,190,220,.45), transparent 30%),
+    radial-gradient(circle at 80% 20%, rgba(255,220,170,.35), transparent 30%),
+    linear-gradient(180deg, #fff1f7 0%, #fff8f0 50%, #ffffff 100%);
+    color: #333;
+    transition: background 1s, color 1s;
+}
+
+header {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    position: relative;
+
+    transform-origin: top;
+
+    background:
+    radial-gradient(
+        circle at 50% 35%,
+        rgba(255, 105, 160, .18),
+        transparent 38%
+    ),
+    linear-gradient(
+        135deg,
+        #fff0f5 0%,
+        #ffe3ed 50%,
+        #fff7fa 100%
+    );
+
+    overflow: hidden;
+}
+
+h1 {
+    color: #d63384;
+
+    font-family: "Georgia", serif;
+
+    font-size: clamp(42px, 6vw, 60px);
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin: 0 0 20px;
+
+    text-shadow:
+        2px 2px 10px rgba(214, 51, 132, .20),
+        0 0 25px rgba(255, 180, 210, .35);
+
+    transition:
+        color .5s ease,
+        text-shadow .5s ease,
+        transform .3s ease;
+}
+
+p {
+    font-size: 20px;
+}
+
+button {
+
+    background: #d63384;
+
+    color: white;
+
+    border: none;
+
+    padding: 15px 35px;
+
+    border-radius: 30px;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+    box-shadow: 0 10px 25px rgba(214,51,132,.35);
+
+}
+
+button:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px rgba(214,51,132,.45);
+
+}
+
+.story {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: white;
+    margin: 30px;
+    border-radius: 20px;
+}
+
+h2 {
+    color: #d63384;
+    font-size: 35px;
+} 
+
+.photos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.photos {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.photo {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.photo:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(214, 51, 132, 0.3);
+}
+
+.photo:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(214, 51, 132, 0.3);
+}
+
+.photos img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.photos img {
+    display: block;
+    width: 300px;
+    height: 300px;
+}
+.photos img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photos img:hover {
+    transform: scale(1.05) rotate(-2deg);
+    box-shadow: 0 15px 35px rgba(214, 51, 132, 0.4);
+}
+
+.story {
+    background-color: #fff0f5;
+    padding: 50px 30px;
+    border-radius: 30px;
+    max-width: 900px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.story h2 {
+    color: #d63384;
+    font-size: 36px;
+    margin-bottom: 25px;
+}
+
+.story p {
+    color: #555;
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.love-date {
+    text-align: center;
+    margin: 50px auto;
+    padding: 30px;
+    max-width: 700px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+.love-date h2 {
+    color: #d63384;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.love-date p {
+    font-size: 24px;
+    color: #555;
+}
+.letter {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.letter button {
+    background: #ff4d88;
+    color: white;
+    border: none;
+    padding: 18px 40px;
+    font-size: 22px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.letter button:hover {
+    background: #e63973;
+    transform: scale(1.08);
+}
+
+.message {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    text-align: center;
+
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(-20px);
+
+    transition: all 0.6s ease;
+}
+
+.message.show {
+    opacity: 1;
+    max-height: 500px;
+    transform: translateY(0);
+    padding: 30px;
+}
+
+.counter {
+    text-align: center;
+    margin: 50px auto;
+    padding: 30px;
+    max-width: 700px;
+    background: white;
+    border-radius: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.counter h2 {
+    color: #d63384;
+    font-size: 32px;
+}
+
+#days {
+    font-size: 45px;
+    color: #ff4d88;
+    font-weight: bold;
+}
+
+#days {
+    transition: 0.5s;
+}
+
+.counter {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: showCounter 1s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes showCounter {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.hearts {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 999;
+}
+
+.heart {
+    position: absolute;
+    bottom: -20px;
+
+    animation: fly 5s linear forwards;
+
+}
+
+
+@keyframes fly {
+
+    from {
+
+        transform: translateY(0) translateX(0) rotate(0deg);
+
+        opacity: 1;
+
+    }
+
+
+    50% {
+
+        transform: translateY(-50vh) translateX(40px) rotate(180deg);
+
+    }
+
+
+    to {
+
+        transform: translateY(-100vh) translateX(-40px) rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+#music-btn {
+    background: #ff4d88;
+    color: white;
+    padding: 18px 35px;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(255,77,136,0.3);
+}
+
+#music-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 15px 35px rgba(255,77,136,0.5);
+}
+
+#music-btn:active {
+    transform: scale(0.95);
+}
+#music-btn.playing {
+    animation: musicGlow 1.5s infinite;
+}
+
+#theme-btn {
+    position: fixed;
+
+    top: 20px;
+    left: 20px;
+
+    width: 70px;
+    height: 38px;
+
+    border: none;
+    border-radius: 30px;
+
+    background: #d1d5db;
+
+    cursor: pointer;
+
+    transition: .4s;
+
+    z-index: 9999;
+
+    padding: 0;
+}
+
+#theme-btn .moon,
+#theme-btn .sun {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 15px;
+
+    pointer-events: none;
+
+}
+
+#theme-btn .moon {
+    left: 8px;
+}
+
+#theme-btn .sun {
+    right: 8px;
+}
+
+#theme-btn .switch {
+
+    position: absolute;
+
+    top: 4px;
+    left: 4px;
+
+    width: 30px;
+    height: 30px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    transition: .4s;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,.3);
+
+    z-index: 2;
+
+}
+
+@keyframes musicGlow {
+
+    0% {
+        box-shadow: 0 0 10px rgba(255,77,136,0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(255,77,136,0.9);
+    }
+
+    100% {
+        box-shadow: 0 0 10px rgba(255,77,136,0.4);
+    }
+
+}
+
+#memory-btn {
+    background: #ff4d88;
+    color: white;
+    padding: 18px 40px;
+    border-radius: 50px;
+    font-size: 22px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s;
+    box-shadow: 0 10px 25px rgba(255,77,136,0.3);
+}
+
+#memory-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 15px 35px rgba(255,77,136,0.5);
+}
+
+#memory-btn:active {
+    transform: scale(0.95);
+}
+
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+}
+
+.letter.hidden {
+    opacity: 1;
+    transform: none;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.love-date {
+    transition-delay: 0.2s;
+}
+
+.counter {
+    transition-delay: 0.4s;
+}
+
+.letter {
+    transition-delay: 0.6s;
+}
+
+.event {
+    background: white;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 25px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    transition: 0.3s;
+}
+
+.event:hover {
+    transform: scale(1.03);
+}
+
+.event h3 {
+    color: #d63384;
+    font-size: 28px;
+}
+
+.event p {
+    color: #555;
+    line-height: 1.6;
+}
+
+#intro {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(to bottom, #ffdde8, #fff);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 99999;
+    transition: opacity 1s ease;
+}
+
+#intro h1 {
+    font-size: 55px;
+    color: #d63384;
+}
+
+#intro p {
+    font-size: 24px;
+    max-width: 700px;
+    margin: 20px;
+}
+
+#start-btn {
+    background: #ff4d88;
+    color: white;
+    border: none;
+    padding: 20px 45px;
+    font-size: 24px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#start-btn:hover {
+    transform: scale(1.08);
+}
+
+
+
+#timer {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+#timer div {
+    background: white;
+    width: 130px;
+    height: 130px;
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+
+    transition: 0.3s;
+}
+
+#timer div:hover {
+    transform: translateY(-8px);
+}
+
+#timer span {
+    font-size: 45px;
+    font-weight: bold;
+    color: #ff4d88;
+}
+
+#timer p {
+    margin: 5px 0 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.envelope {
+    width: 350px;
+    height: 220px;
+    background: #ffb6c9;
+    margin: 80px auto 30px;
+    border-radius: 20px;
+    position: relative;
+}
+
+.paper {
+    position: absolute;
+
+    width: 90%;
+    height: 90%;
+
+    left: 5%;
+    top: 5%;
+
+    background: white;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    border-radius: 15px;
+
+    transform: translateY(0);
+
+    transition: 1s ease;
+
+    z-index: 1;
+
+    text-align: center;
+}
+
+
+.envelope.open .paper {
+    transform: translateY(-180px);
+}
+
+.flap {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 0;
+
+    border-left: 175px solid transparent;
+    border-right: 175px solid transparent;
+    border-top: 120px solid #ff8fb3;
+
+    transform-origin: top;
+    transition: 1s;
+    z-index: 3;
+}
+
+
+.envelope.open .flap {
+    transform: rotateX(180deg);
+}
+
+
+.envelope {
+    perspective: 800px;
+}
+
+
+.paper {
+    z-index: 1;
+}
+
+.paper {
+    font-family: "Georgia", serif;
+    color: #555;
+}
+
+.paper h3 {
+    color: #d63384;
+    font-size: 32px;
+}
+
+.letter-text {
+    font-size: 20px;
+    line-height: 1.7;
+}
+
+.signature {
+    margin-top: 40px;
+    font-size: 24px;
+    color: #d63384;
+    font-style: italic;
+}
+
+.envelope {
+    position: relative;
+    width: 350px;
+    height: 220px;
+    margin: 80px auto;
+    background: #ffb6c9;
+    border-radius: 20px;
+    overflow: visible;
+    perspective: 800px;
+}
+
+
+.paper {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+
+    width: 90%;
+    height: 90%;
+
+    background: white;
+    border-radius: 15px;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    transform: translateY(0);
+    transition: 1s ease;
+
+    z-index: 2;
+}
+
+.paper {
+    clip-path: inset(0);
+}
+
+
+.envelope.open .paper {
+    transform: translateY(-180px);
+}
+
+
+.flap {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    border-left: 175px solid transparent;
+    border-right: 175px solid transparent;
+    border-top: 120px solid #ff8fb3;
+
+    transform-origin: top;
+    transition: 1s;
+
+    z-index: 3;
+}
+
+
+.envelope.open .flap {
+    transform: rotateX(180deg);
+}
+
+/* ENVELOPE FINAL FIX */
+
+.envelope {
+    width: 350px;
+    height: 220px;
+    background: #ffb6c9;
+    margin: 80px auto;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.paper {
+    position: absolute;
+
+    left: 5%;
+    top: 5%;
+
+    width: 90%;
+    height: 90%;
+
+    background: white;
+    border-radius: 15px;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    transform: translateY(120%);
+    transition: 1s ease;
+
+    z-index: 1;
+}
+
+
+.envelope.open .paper {
+    transform: translateY(-120px);
+}
+
+
+.flap {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    border-left: 175px solid transparent;
+    border-right: 175px solid transparent;
+    border-top: 120px solid #ff8fb3;
+
+    z-index: 3;
+}
+
+
+.letter-paper {
+    position: relative;
+
+    width: 80%;
+    max-width: 700px;
+
+    max-height: 80vh;
+
+    overflow-y: auto;
+
+    background: #fffdf7;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+
+    font-family: Georgia, serif;
+}
+
+
+.fullscreen-letter.show .letter-paper {
+
+    transform: scale(1);
+
+    opacity: 1;
+
+}
+
+.fullscreen-letter {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0,0,0,0.9);
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999999;
+}
+
+
+.fullscreen-letter.show {
+    display: flex;
+}
+
+
+.letter-paper {
+
+    position: relative;
+
+    width: 90%;
+    max-width: 900px;
+    
+    height: 80vh;
+    max-height: 80vh;
+
+    overflow-y: auto;
+
+    background: #fffdf7;
+
+    padding: 40px;
+
+    border-radius: 15px;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+
+    font-family: Georgia, serif;
+
+    line-height: 1.7;
+}
+
+/* НОВОЕ ОКНО ПИСЬМА */
+
+.fullscreen-letter {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(0,0,0,0.9);
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999999;
+
+}
+
+
+.fullscreen-letter.show {
+    display: flex;
+}
+
+/* ТИТУЛЬНАЯ СТРАНИЦА */
+
+.cover-page {
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+.cover-page h1 {
+
+    color: #d63384;
+
+    font-size: 50px;
+
+    font-family: Georgia, serif;
+
+}
+
+
+.cover-page p {
+
+    font-size: 28px;
+
+    color: #555;
+
+}
+
+
+.cover-line {
+
+    width: 250px;
+
+    height: 2px;
+
+    background: #d63384;
+
+    margin: 30px 0;
+
+}
+
+
+.cover-page .date {
+
+    font-size: 24px;
+
+    font-style: italic;
+
+}
+
+
+.cover-page .author {
+
+    margin-top: 50px;
+
+    color: #d63384;
+
+    font-size: 30px;
+
+}
+
+.cover-page {
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    font-family: "Segoe Print", cursive;
+
+}
+
+.fullscreen-letter {
+    position: fixed !important;
+
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+
+    background: rgba(0,0,0,0.95) !important;
+
+    display: flex !important;
+
+    justify-content: center !important;
+    align-items: center !important;
+
+    z-index: 999999999 !important;
+}
+
+.fullscreen-letter {
+    display: none !important;
+}
+
+.fullscreen-letter.show {
+    display: flex !important;
+}
+
+/* =========================
+   ПИСЬМО
+========================= */
+
+#letter-window {
+    position: fixed;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(30, 12, 18, .82);
+    backdrop-filter: blur(8px);
+
+    z-index: 999999;
+}
+
+#letter-window.show {
+    display: flex;
+}
+
+#letter-content {
+    position: relative;
+
+    width: 90%;
+    max-width: 900px;
+    height: 88vh;
+
+    box-sizing: border-box;
+    padding: 60px;
+
+    overflow-y: auto;
+
+    background-color: #f3e6c9;
+
+    background-image:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 33px,
+            rgba(100, 130, 180, .15) 34px,
+            transparent 35px
+        ),
+
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(150, 100, 50, .12),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(120, 80, 40, .10),
+            transparent 30%
+        );
+
+    border: 1px solid rgba(145, 100, 55, .45);
+    border-radius: 16px;
+
+    box-shadow:
+        inset 0 0 70px rgba(100, 65, 25, .18),
+        0 25px 70px rgba(0, 0, 0, .45);
+
+    color: #4b3025;
+
+    opacity: 0;
+    transform: scale(.94) translateY(15px);
+
+    transition:
+        opacity .45s ease,
+        transform .45s ease;
+}
+
+#letter-window.show #letter-content {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+
+/* Текст письма */
+
+#letter-content p {
+    font-family: "Segoe Print", "Comic Sans MS", cursive;
+
+    font-size: 21px;
+    line-height: 1.9;
+
+    color: #4b3025;
+
+    text-align: left;
+
+    margin-bottom: 25px;
+}
+
+
+/* Подпись сверху */
+
+.letter-sign {
+    position: absolute;
+
+    top: 35px;
+    left: 45px;
+
+    font-family: "Segoe Print", "Comic Sans MS", cursive;
+
+    font-size: 28px;
+
+    color: #7a3b4d;
+
+    transform: rotate(-5deg);
+
+    opacity: .8;
+
+    text-shadow:
+        1px 1px 2px rgba(80, 40, 20, .2);
+}
+
+
+/* Крестик */
+
+#close-letter {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    background: transparent;
+
+    border: none;
+
+    color: #b5486b;
+
+    font-size: 35px;
+
+    cursor: pointer;
+
+    box-shadow: none;
+}
+
+
+/* Страницы */
+
+.letter-page {
+    display: none;
+}
+
+.letter-page.active {
+    display: block;
+}
+
+.letter-sign {
+
+    position: absolute;
+
+    top: 35px;
+    left: 45px;
+
+    font-family: "Segoe Print", "Comic Sans MS", cursive;
+
+    font-size: 28px;
+
+    color: #6e382c;
+
+    transform: rotate(-5deg);
+
+    opacity: .75;
+
+    text-shadow: 
+    1px 1px 2px rgba(80,40,20,.25);
+
+}
+
+.letter-date {
+
+    position: absolute;
+
+    top: 45px;
+    right: 55px;
+
+    font-family: "Segoe Print", "Comic Sans MS", cursive;
+
+    font-size: 22px;
+
+    color: #7a3b2e;
+
+    transform: rotate(3deg);
+
+    opacity: .7;
+
+}
+
+
+#letter-content p {
+
+    font-family: "Segoe Print", "Comic Sans MS", cursive;
+
+    font-size: 22px;
+
+    line-height: 1.8;
+
+    color: #4b3025;
+
+    margin-bottom: 25px;
+
+}
+
+#letter-content p {
+
+    font-family: "Segoe Print", "Comic Sans MS", cursive;
+
+    font-size: 21px;
+
+    line-height: 1.9;
+
+    color: #4b3025;
+
+    text-align: left;
+
+    margin-bottom: 25px;
+
+}
+
+@keyframes scrollOpen {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            scaleY(0);
+
+    }
+
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            scaleY(1);
+
+    }
+
+}
+
+#map-section {
+
+    padding: 80px 20px;
+
+    text-align: center;
+
+}
+
+
+#map-section h2 {
+
+    color: #d63384;
+
+    font-size: 40px;
+
+}
+
+
+.map-box {
+
+    position: relative;
+
+    width: 90%;
+
+    max-width: 800px;
+
+    height: 400px;
+
+    margin: 40px auto;
+
+    background-image: url("images/images/europe-map.jpg");
+    
+    background-size: cover;
+    
+    background-position: center;
+
+    border-radius: 20px;
+
+}
+
+
+.line {
+
+    position: absolute;
+
+    width: 50%;
+
+    height: 0;
+
+    border-top: 4px dashed #d63384;
+
+    top: 50%;
+
+    left: 25%;
+
+    transform: rotate(-15deg);
+
+}
+
+.dot {
+
+    width: 18px;
+
+    height: 18px;
+
+    background: #d63384;
+
+    border-radius: 50%;
+
+    margin: auto;
+
+    box-shadow:
+    0 0 20px rgba(214,51,132,.7);
+
+}
+
+/* ---------- NIGHT MODE ---------- */
+
+body.dark {
+    background: linear-gradient(
+        to bottom,
+        #050b18,
+        #16263d
+    );
+
+    color: #f5f5f5;
+
+    transition: 1s;
+}
+
+
+body.dark header {
+    background: transparent;
+}
+
+body.dark h1,
+body.dark h2,
+body.dark h3,
+body.dark p {
+    color: white;
+}
+
+body.dark .story,
+body.dark .timeline-content,
+body.dark #letter-content,
+body.dark .gallery,
+body.dark .love-date,
+body.dark .counter {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,.15);
+    color: white;
+}
+
+body.dark .map-box {
+    border: 1px solid rgba(255,255,255,.15);
+}
+
+body.dark .timeline::before {
+    background: #7ec8ff;
+}
+
+/* Переключатель в ночном режиме */
+
+body.dark #theme-btn {
+    background: #1e3a5f;
+}
+
+body.dark #theme-btn .switch {
+    left: 36px;
+}
+
+body.dark #theme-btn {
+    box-shadow: 0 0 18px rgba(120,180,255,.35);
+}
+
+#theme-btn:hover {
+    transform: scale(1.05);
+}
+
+/* ---------- STARS ---------- */
+
+#stars {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    transition: opacity .8s;
+
+    z-index: 1;
+
+    background-image:
+        radial-gradient(circle, white 1px, transparent 1px),
+        radial-gradient(circle, white 1.5px, transparent 1.5px),
+        radial-gradient(circle, white 1px, transparent 1px);
+
+    background-size:
+        180px 180px,
+        260px 260px,
+        340px 340px;
+
+    background-position:
+        0 0,
+        80px 120px,
+        150px 40px;
+}
+
+body.dark #stars {
+    opacity: 1;
+}
+
+header,
+section,
+.timeline,
+.map-box,
+.gallery,
+#letter-window {
+    position: relative;
+    z-index: 2;
+}
+
+/* ---------- MOON ---------- */
+
+#moon {
+
+    position: fixed;
+
+    top: 60px;
+    right: 70px;
+
+    width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+
+    background: radial-gradient(circle at 30% 30%, #fffef5, #f5e6a8);
+
+    box-shadow:
+        0 0 40px rgba(255,245,180,.8),
+        0 0 80px rgba(255,245,180,.45),
+        0 0 140px rgba(255,245,180,.2);
+
+    opacity: 0;
+
+    transform: scale(.7);
+
+    transition:
+        opacity .8s,
+        transform .8s;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+body.dark #moon {
+
+    opacity: 1;
+
+    transform: scale(1);
+
+}
+
+/* ---------- CLOUDS ---------- */
+
+#clouds {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    transition: opacity .8s;
+
+    z-index: 2;
+
+    overflow: hidden;
+
+}
+
+body.dark #clouds {
+    opacity: 1;
+}
+
+.cloud {
+
+    position: absolute;
+
+    background: rgba(255,255,255,.08);
+
+    border-radius: 100px;
+
+    filter: blur(10px);
+
+    animation: cloudMove 80s linear infinite;
+
+}
+
+.cloud::before,
+.cloud::after {
+
+    content: "";
+
+    position: absolute;
+
+    background: inherit;
+
+    border-radius: 50%;
+
+}
+
+.cloud::before {
+
+    width: 60%;
+
+    height: 100%;
+
+    left: -25px;
+
+    top: -12px;
+
+}
+
+.cloud::after {
+
+    width: 45%;
+
+    height: 80%;
+
+    right: -20px;
+
+    top: -8px;
+
+}
+
+.cloud1 {
+
+    width: 220px;
+    height: 70px;
+
+    top: 120px;
+    left: -250px;
+
+    animation-duration: 95s;
+
+}
+
+.cloud2 {
+
+    width: 180px;
+    height: 55px;
+
+    top: 260px;
+    left: -300px;
+
+    animation-duration: 120s;
+
+    animation-delay: -40s;
+
+}
+
+.cloud3 {
+
+    width: 260px;
+    height: 80px;
+
+    top: 430px;
+    left: -350px;
+
+    animation-duration: 105s;
+
+    animation-delay: -70s;
+
+}
+
+@keyframes cloudMove {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(100vw + 700px));
+    }
+
+}
+
+/* ---------- METEORS ---------- */
+
+#meteors {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 3;
+}
+
+
+.meteor {
+
+    position: absolute;
+
+    width: 3px;
+    height: 120px;
+
+    background: linear-gradient(
+        to bottom,
+        white,
+        transparent
+    );
+
+    border-radius: 50%;
+
+    opacity: 0;
+
+    transform: rotate(45deg);
+
+}
+
+
+.meteor.active {
+
+    animation: meteorFall 2s linear;
+
+}
+
+
+.meteor1 {
+
+    top: -150px;
+    left: 20%;
+
+    animation-delay: 1s;
+
+}
+
+
+.meteor2 {
+
+    top: -200px;
+    left: 55%;
+
+    animation-delay: 2.5s;
+
+}
+
+
+.meteor3 {
+
+    top: -100px;
+    left: 80%;
+
+    animation-delay: 4s;
+
+}
+
+
+
+@keyframes meteorFall {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+        translate(0,0)
+        rotate(45deg);
+
+    }
+
+
+    10% {
+
+        opacity: 1;
+
+    }
+
+
+    60% {
+
+        opacity: 1;
+
+    }
+
+
+    100% {
+
+        opacity: 0;
+
+        transform:
+        translate(-400px,600px)
+        rotate(45deg);
+
+    }
+
+}
+
+#header-text {
+
+    opacity: 0;
+
+    transform: translateY(20px);
+
+    transition: .8s;
+
+}
+
+#header-text.show {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+#quiz {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.85);
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999999;
+
+    padding: 20px;
+
+}
+
+.quiz-box {
+
+    width: 90%;
+    max-width: 650px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    text-align: center;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,.3);
+
+    animation: quizAppear .5s ease;
+
+}
+
+.quiz-box h2 {
+
+    color: #ff4d88;
+
+    margin-bottom: 20px;
+
+}
+
+.quiz-question {
+
+    font-size: 24px;
+
+    margin-bottom: 35px;
+
+}
+
+.answer {
+
+    width: 100%;
+
+    margin: 12px 0;
+
+    padding: 18px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background: #ff4d88;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: .25s;
+
+}
+
+.answer:hover {
+
+    transform: scale(1.03);
+
+    background: #ff2d73;
+
+}
+
+@keyframes quizAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(.9);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+#quiz-message{
+
+    height:30px;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
+
+    transition:.3s;
+
+}
+
+#quiz-message.error{
+
+    color:#ff3b3b;
+
+}
+
+#quiz-message.success{
+
+    color:#3bb54a;
+
+}
+
+.quiz-box.shake{
+
+    animation:shake .45s;
+
+}
+
+@keyframes shake{
+
+0%{transform:translateX(0);}
+20%{transform:translateX(-10px);}
+40%{transform:translateX(10px);}
+60%{transform:translateX(-8px);}
+80%{transform:translateX(8px);}
+100%{transform:translateX(0);}
+
+}
+
+.quiz-box.fade {
+
+    opacity: 0;
+
+    transform: translateX(-80px);
+
+}
+
+.quiz-box {
+
+    transition: 
+    opacity .5s ease,
+    transform .5s  ease;
+}
+
+.question-content{
+
+    transition:
+        opacity .35s ease,
+        transform .35s ease;
+
+}
+
+.question-content.hide{
+
+    opacity:0;
+
+    transform:translateY(15px);
+
+}
+
+.question-content {
+    width: 90%;
+
+    max-width: 500px;
+
+    text-align: center;
+}
+
+#quiz .question-content {
+
+    width: 90%;
+    max-width: 650px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    box-shadow: 0 20px 50px rgba(0,0,0,.3);
+
+}
+
+#letter-window {
+    transform: none !important;
+}
+
+#letter-content {
+    transform: none;
+}
+
+#letter-window {
+    position: fixed !important;
+    inset: 0 !important;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: none;
+
+    justify-content: center;
+    align-items: center;
+
+    z-index: 999999;
+}
+
+#letter-window.show {
+    display: flex;
+}
+
+.letter-page {
+    display: none;
+}
+
+.letter-page.active {
+    display: block;
+}
+
+body:not(.dark) {
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(255, 170, 210, 0.45),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(255, 215, 160, 0.38),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 50% 90%,
+            rgba(220, 195, 255, 0.30),
+            transparent 35%
+        ),
+        linear-gradient(
+            180deg,
+            #fff0f6 0%,
+            #fff8f1 50%,
+            #f8f4ff 100%
+        );
+
+    background-attachment: fixed;
+}
+
+header h1,
+header #header-text,
+header #memory-btn,
+header #music-btn {
+    position: relative;
+    z-index: 2;
+}
+
+header::before {
+    content: "";
+
+    position: absolute;
+
+    width: min(850px, 90vw);
+    height: 520px;
+
+    background: rgba(255, 255, 255, .48);
+
+    border: 1px solid rgba(255, 255, 255, .75);
+
+    border-radius: 40px;
+
+    box-shadow:
+        0 30px 80px rgba(180, 90, 130, .12),
+        inset 0 1px 0 rgba(255,255,255,.9);
+
+    backdrop-filter: blur(8px);
+
+    z-index: 1;
+}
+
+body.dark header::before {
+    background: rgba(10, 25, 45, .45);
+
+    border-color: rgba(255,255,255,.12);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.35);
+}
+
+#header-text {
+    width: min(90%, 650px);
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 21px;
+    font-weight: 400;
+    line-height: 1.8;
+
+    letter-spacing: .3px;
+
+    color: #6b4a58;
+
+    text-align: center;
+
+    box-sizing: border-box;
+
+    opacity: 0;
+    transform: translateY(20px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+}
+
+header #memory-btn,
+header #music-btn {
+    position: relative;
+    z-index: 3;
+
+    min-width: 280px;
+
+    margin: 8px 0;
+
+    padding: 16px 28px;
+
+    border-radius: 50px;
+
+    font-size: 17px;
+    font-weight: 600;
+
+    letter-spacing: .3px;
+
+    background: rgba(214, 51, 132, .92);
+
+    box-shadow:
+        0 10px 25px rgba(214, 51, 132, .22),
+        inset 0 1px 0 rgba(255,255,255,.35);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+}
+
+header #memory-btn:hover,
+header #music-btn:hover {
+    transform: translateY(-4px);
+
+    background: #d63384;
+
+    box-shadow:
+        0 15px 32px rgba(214, 51, 132, .32),
+        inset 0 1px 0 rgba(255,255,255,.45);
+}
+
+header #memory-btn:active,
+header #music-btn:active {
+    transform: translateY(-1px);
+}
+
+/* ---------- НОВЫЙ ВИД КВИЗА ---------- */
+
+#quiz {
+    width: 100vw;
+    max-width: none;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    background: rgba #160b12;
+
+    border-radius: 0;
+
+    box-shadow: none;
+}
+
+#quiz .question-content {
+    width: min(90%, 560px);
+    max-width: 560px;
+
+    box-sizing: border-box;
+
+    padding: 45px 40px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    border-radius: 32px;
+
+    box-shadow:
+        0 25px 70px rgba(80, 20, 50, 0.35),
+        0 0 40px rgba(255, 120, 170, 0.12);
+
+    backdrop-filter: blur(10px);
+
+    text-align: center;
+}
+
+#quiz .quiz-question {
+    color: #573846;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 23px;
+    line-height: 1.5;
+
+    margin-bottom: 30px;
+}
+
+#quiz .answer {
+    width: 100%;
+
+    margin: 9px 0;
+
+    padding: 16px 20px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #ff5c96,
+        #e83d78
+    );
+
+    box-shadow:
+        0 8px 20px rgba(232, 61, 120, 0.22);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+#quiz .answer:hover {
+    transform: translateY(-3px);
+
+    background: linear-gradient(
+        135deg,
+        #ff6da2,
+        #ed3976
+    );
+
+    box-shadow:
+        0 12px 25px rgba(232, 61, 120, 0.32);
+}
+
+#quiz .quiz-box h2,
+#quiz #quiz-title {
+    margin: 0 0 22px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 28px;
+
+    font-weight: 700;
+
+    letter-spacing: .5px;
+
+    color: #d63384;
+
+    text-shadow:
+        0 3px 12px rgba(214, 51, 132, .18);
+}
+
+.quiz-success {
+    text-align: center;
+
+    padding: 40px 30px;
+
+    background: rgba(255, 255, 255, 0.97);
+
+    border-radius: 28px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, .25);
+
+    box-sizing: border-box;
+}
+
+.success-heart {
+    font-size: 52px;
+    margin-bottom: 10px;
+
+    animation: successHeart 1.2s ease-in-out infinite;
+}
+
+.quiz-success h2 {
+    margin: 0 0 20px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 34px;
+
+    color: #d63384;
+
+    text-shadow:
+        0 4px 15px rgba(214, 51, 132, .18);
+}
+
+.quiz-success p {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 22px;
+
+    line-height: 1.7;
+
+    color: #573846;
+}
+
+@keyframes successHeart {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+}
+
+.quiz-success {
+    animation: successAppear .7s ease forwards;
+}
+
+@keyframes successAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(.92) translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+}
+
+.quiz-success {
+    animation: successAppear .7s ease forwards;
+}
+
+.quiz-success.leaving {
+    animation: successLeave .7s ease forwards;
+}
+
+@keyframes successAppear {
+
+    from {
+        opacity: 0;
+        transform: scale(.92) translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+}
+
+@keyframes successLeave {
+
+    from {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(.96) translateY(-15px);
+    }
+
+}
+
+#quiz {
+    position: fixed !important;
+
+    inset: 0 !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+
+    padding: 20px !important;
+
+    box-sizing: border-box;
+
+    background:
+    radial-gradient(
+        circle at 50% 45%,
+        rgba(214, 51, 132, .22),
+        transparent 42%
+    ),
+    linear-gradient(
+        135deg,
+        #160b12 0%,
+        #2a0d1d 50%,
+        #10070d 100%
+    ) !important;
+
+    opacity: 1 !important;
+
+    z-index: 2147483647 !important;
+}
+
+#quiz .question-content {
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(255, 180, 205, .45),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #fff7fa 0%,
+            #ffeef4 50%,
+            #fff9fb 100%
+        );
+
+    border: 1px solid rgba(255, 255, 255, .9);
+
+    box-shadow:
+        0 25px 70px rgba(70, 15, 40, .35),
+        inset 0 1px 0 rgba(255,255,255,.9),
+        inset 0 0 35px rgba(255, 150, 190, .12);
+}
+
+#quiz .question-content {
+    border: 1px solid rgba(214, 51, 132, .18);
+
+    box-shadow:
+        0 25px 70px rgba(70, 15, 40, .38),
+        0 0 0 6px rgba(255, 255, 255, .18),
+        inset 0 1px 0 rgba(255, 255, 255, .95),
+        inset 0 0 45px rgba(214, 51, 132, .10);
+}
+
+#quiz .answer {
+    position: relative;
+
+    width: 100%;
+
+    margin: 10px 0;
+    padding: 17px 22px;
+
+    box-sizing: border-box;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(214, 51, 132, .18);
+
+    background: linear-gradient(
+        135deg,
+        #fff5f8,
+        #ffe6ef
+    );
+
+    color: #7a294d;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    box-shadow:
+        0 6px 16px rgba(214, 51, 132, .10);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+}
+
+#quiz .answer:hover {
+    transform: translateY(-3px);
+
+    background: linear-gradient(
+        135deg,
+        #ffeaf2,
+        #ffd8e6
+    );
+
+    box-shadow:
+        0 10px 24px rgba(214, 51, 132, .20);
+}
+
+#quiz .answer:active {
+    transform: translateY(0) scale(.98);
+}
+
+/* ---------- INTRO ---------- */
+
+#intro {
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px 25px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(255, 105, 160, .18),
+            transparent 42%
+        ),
+        linear-gradient(
+            135deg,
+            #fff0f5 0%,
+            #ffe0eb 50%,
+            #fff7fa 100%
+        );
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Главный заголовок */
+
+#intro h1 {
+    margin: 0 0 30px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(42px, 7vw, 68px);
+
+    line-height: 1.15;
+
+    color: #c72f70;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+        0 5px 20px rgba(199, 47, 112, .18);
+}
+
+
+/* Текст */
+
+#intro-text {
+    width: min(90%, 620px);
+
+    margin: 0 auto 35px;
+
+    font-family:
+        "Segoe Print",
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    color: #633b4b;
+}
+
+
+/* Кнопка */
+
+#intro #start-btn {
+    padding: 17px 42px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #ff5c96,
+        #d63384
+    );
+
+    font-size: 18px;
+    font-weight: 600;
+
+    box-shadow:
+        0 12px 30px rgba(214, 51, 132, .25);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+#intro #start-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 16px 35px rgba(214, 51, 132, .35);
+}
+
+#intro #start-btn:active {
+    transform: scale(.97);
+}
+
+#site-content {
+    display: none;
+}
+
+header {
+    position: relative;
+
+    min-height: 100vh;
+
+    padding: 60px 25px;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(255, 105, 160, .14),
+            transparent 40%
+        ),
+        linear-gradient(
+            to bottom,
+            #fff0f5,
+            #ffffff
+        );
+}
+
+
+/* Текст под заголовком */
+
+#header-text {
+    width: min(90%, 620px);
+
+    margin: 25px auto 35px;
+
+    font-family:
+        "Segoe Print",
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    color: #633b4b;
+}
+
+
+/* Основная кнопка */
+
+#memory-btn {
+    padding: 17px 35px;
+
+    border-radius: 50px;
+
+    background: linear-gradient(
+        135deg,
+        #ff5c96,
+        #d63384
+    );
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 12px 30px rgba(214, 51, 132, .25);
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+#memory-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 16px 35px rgba(214, 51, 132, .35);
+}
+
+
+/* Кнопка музыки */
+
+#music-btn {
+    margin-top: 15px;
+
+    padding: 12px 25px;
+
+    border-radius: 50px;
+
+    background: rgba(255, 255, 255, .75);
+
+    color: #b52f68;
+
+    border: 1px solid rgba(214, 51, 132, .18);
+
+    box-shadow:
+        0 6px 18px rgba(214, 51, 132, .10);
+
+    font-size: 16px;
+
+    transition:
+        transform .25s ease,
+        background .25s ease;
+}
+
+#music-btn:hover {
+    transform: translateY(-2px);
+
+    background: #fff0f5;
+}
+
+#header-text {
+    width: min(90%, 650px);
+
+    box-sizing: border-box;
+
+    padding: 28px 35px;
+
+    margin: 20px auto 35px;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 245, 249, .92),
+            rgba(255, 225, 237, .82)
+        );
+
+    border: 1px solid rgba(214, 51, 132, .12);
+
+    box-shadow:
+        0 15px 40px rgba(180, 60, 110, .12),
+        inset 0 1px 0 rgba(255,255,255,.9);
+
+    color: #633b4b;
+
+    font-family:
+        "Segoe Print",
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    text-align: center;
+}
+
+#header-text {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.72),
+            rgba(255,220,235,.58)
+        );
+
+    border: 1px solid rgba(255,255,255,.8);
+
+    border-radius: 34px;
+
+    box-shadow:
+        0 20px 50px rgba(180,60,110,.14),
+        inset 0 1px 1px rgba(255,255,255,.9),
+        inset 0 -10px 30px rgba(255,180,210,.08);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* =========================
+   НОЧНОЕ ПИСЬМО
+========================= */
+
+body.dark #letter-window {
+    background: rgba(8, 5, 18, .88);
+}
+
+body.dark #letter-content {
+    background-color: #241827;
+
+    background-image:
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 33px,
+            rgba(255, 150, 190, .10) 34px,
+            transparent 35px
+        ),
+
+        radial-gradient(
+            circle at 20% 15%,
+            rgba(255, 120, 170, .12),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 80% 75%,
+            rgba(150, 100, 220, .10),
+            transparent 35%
+        );
+
+    border-color: rgba(255, 160, 195, .22);
+
+    box-shadow:
+        inset 0 0 80px rgba(255, 120, 180, .08),
+        0 0 60px rgba(180, 90, 180, .18),
+        0 25px 70px rgba(0, 0, 0, .65);
+
+    color: #f5dce7;
+}
+
+body.dark #letter-content p {
+    color: #f1dce5;
+}
+
+body.dark .letter-sign {
+    color: #ffabc9;
+}
+
+body.dark #close-letter {
+    color: #ff9fbd;
+}
+
+/* =========================================================
+   FINAL DESIGN OVERRIDE
+   Вставить В САМЫЙ НИЗ CSS
+========================================================= */
+
+
+/* =========================================================
+   1. ОСНОВА СТРАНИЦЫ
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: Arial, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(255, 180, 215, .42),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(255, 220, 175, .35),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 50% 90%,
+            rgba(220, 195, 255, .28),
+            transparent 35%
+        ),
+        linear-gradient(
+            180deg,
+            #fff1f7 0%,
+            #fff9f3 50%,
+            #f8f4ff 100%
+        );
+
+    background-attachment: fixed;
+
+    color: #49323d;
+
+    transition:
+        background 1s ease,
+        color 1s ease;
+}
+
+
+/* =========================================================
+   2. HEADER / ГЛАВНЫЙ ЭКРАН
+========================================================= */
+
+header {
+    position: relative;
+
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    padding: 60px 25px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(255, 105, 160, .16),
+            transparent 42%
+        ),
+        linear-gradient(
+            135deg,
+            #fff0f5 0%,
+            #ffe4ee 50%,
+            #fff8fb 100%
+        );
+
+    z-index: 2;
+}
+
+
+/* Стеклянная карточка внутри header */
+
+header::before {
+    content: "";
+
+    position: absolute;
+
+    width: min(850px, 90vw);
+    height: 520px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.62),
+            rgba(255,235,244,.42)
+        );
+
+    border: 1px solid rgba(255,255,255,.82);
+
+    border-radius: 42px;
+
+    box-shadow:
+        0 30px 80px rgba(180, 90, 130, .14),
+        inset 0 1px 0 rgba(255,255,255,.95);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    z-index: 0;
+}
+
+
+/* Всё содержимое поверх карточки */
+
+header > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+   3. ЗАГОЛОВКИ
+========================================================= */
+
+h1 {
+    margin: 0 0 20px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(42px, 6vw, 62px);
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    color: #d63384;
+
+    text-shadow:
+        2px 3px 12px rgba(214,51,132,.16),
+        0 0 30px rgba(255,180,210,.30);
+
+    transition:
+        color .5s ease,
+        text-shadow .5s ease;
+}
+
+h2 {
+    color: #d63384;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 36px;
+}
+
+h3 {
+    color: #d63384;
+}
+
+
+/* =========================================================
+   4. ТЕКСТ ПОД ЗАГОЛОВКОМ
+========================================================= */
+
+#header-text {
+    width: min(90%, 650px);
+
+    box-sizing: border-box;
+
+    margin: 20px auto 30px;
+
+    padding: 26px 32px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.74),
+            rgba(255,220,235,.54)
+        );
+
+    border: 1px solid rgba(255,255,255,.82);
+
+    box-shadow:
+        0 18px 45px rgba(180,60,110,.12),
+        inset 0 1px 1px rgba(255,255,255,.9);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    font-family:
+        "Segoe Print",
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    color: #633b4b;
+
+    text-align: center;
+
+    opacity: 1;
+    transform: none;
+}
+
+
+/* =========================================================
+   5. КНОПКИ
+   ========================================================= */
+
+button {
+    font-family: Arial, sans-serif;
+
+    cursor: pointer;
+
+    border: none;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease,
+        background .25s ease;
+}
+
+
+/* Кнопки главного экрана */
+
+header #memory-btn,
+header #music-btn {
+
+    min-width: 280px;
+
+    box-sizing: border-box;
+
+    margin: 8px 0;
+
+    padding: 16px 30px;
+
+    border-radius: 50px;
+
+    font-size: 17px;
+
+    font-weight: 600;
+
+    letter-spacing: .3px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff5c96,
+            #d63384
+        );
+
+    color: white;
+
+    box-shadow:
+        0 12px 30px rgba(214,51,132,.24);
+}
+
+header #memory-btn:hover,
+header #music-btn:hover {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 18px 38px rgba(214,51,132,.32);
+}
+
+header #memory-btn:active,
+header #music-btn:active {
+
+    transform: scale(.97);
+}
+
+
+/* Музыка */
+
+header #music-btn {
+
+    background:
+        rgba(255,255,255,.78);
+
+    color: #b52f68;
+
+    border: 1px solid rgba(214,51,132,.16);
+
+    box-shadow:
+        0 8px 22px rgba(214,51,132,.10);
+}
+
+header #music-btn:hover {
+
+    background: #fff0f5;
+
+    color: #d63384;
+}
+
+
+/* =========================================================
+   6. КАРТОЧКИ
+========================================================= */
+
+.story,
+.gallery,
+.love-date,
+.counter,
+.event {
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.84),
+            rgba(255,241,247,.70)
+        );
+
+    border: 1px solid rgba(255,255,255,.85);
+
+    box-shadow:
+        0 15px 40px rgba(150,70,110,.10),
+        inset 0 1px 0 rgba(255,255,255,.8);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    color: #4d3641;
+}
+
+.story {
+    max-width: 900px;
+
+    margin: 40px auto;
+
+    padding: 50px 30px;
+
+    border-radius: 30px;
+
+    text-align: center;
+}
+
+.story p,
+.event p {
+    color: #634b56;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   7. ДАТА
+========================================================= */
+
+.love-date {
+
+    max-width: 700px;
+
+    margin: 50px auto;
+
+    padding: 30px;
+
+    border-radius: 28px;
+
+    text-align: center;
+}
+
+.love-date h2 {
+    margin-bottom: 15px;
+}
+
+.love-date p {
+    color: #634b56;
+}
+
+
+/* =========================================================
+   8. СЧЁТЧИК
+========================================================= */
+
+.counter {
+
+    max-width: 700px;
+
+    margin: 50px auto;
+
+    padding: 30px;
+
+    border-radius: 28px;
+
+    text-align: center;
+}
+
+#days {
+    color: #ff4d88;
+
+    font-size: 45px;
+
+    font-weight: bold;
+}
+
+
+/* =========================================================
+   9. ГАЛЕРЕЯ
+========================================================= */
+
+.photos {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 24px;
+
+    flex-wrap: wrap;
+}
+
+.photos img {
+
+    display: block;
+
+    width: 250px;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 22px;
+
+    border: 5px solid rgba(255,255,255,.9);
+
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.12);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.photos img:hover {
+
+    transform:
+        scale(1.05)
+        rotate(-1.5deg);
+
+    box-shadow:
+        0 18px 40px rgba(214,51,132,.25);
+}
+
+
+/* =========================================================
+   11. КАРТА
+========================================================= */
+
+#map-section {
+
+    padding: 80px 20px;
+
+    text-align: center;
+}
+
+.map-box {
+
+    width: min(90%, 800px);
+
+    height: 400px;
+
+    margin: 40px auto;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,.75);
+
+    box-shadow:
+        0 20px 50px rgba(120,60,90,.14);
+}
+
+.dot {
+
+    background: #d63384;
+
+    box-shadow:
+        0 0 20px rgba(214,51,132,.65);
+}
+
+
+/* =========================================================
+   12. ПИСЬМО — ДНЕВНОЙ РЕЖИМ
+========================================================= */
+
+#letter-window {
+
+    position: fixed !important;
+
+    inset: 0 !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+
+    box-sizing: border-box;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    background:
+        rgba(35, 15, 23, .76);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    z-index: 999999 !important;
+}
+
+#letter-window.show {
+    display: flex !important;
+}
+
+
+#letter-content {
+
+    position: relative;
+
+    width: min(900px, 92vw);
+
+    height: min(88vh, 900px);
+
+    box-sizing: border-box;
+
+    padding: 70px 70px 60px;
+
+    overflow-y: auto;
+
+    border-radius: 18px;
+
+    border: 1px solid rgba(145,100,55,.40);
+
+    background-color: #f3e6c9;
+
+    background-image:
+
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 33px,
+            rgba(100,130,180,.14) 34px,
+            transparent 35px
+        ),
+
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(150,100,50,.12),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(120,80,40,.10),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(255,255,255,.20),
+            transparent 60%
+        );
+
+    box-shadow:
+        inset 0 0 80px rgba(100,65,25,.18),
+        0 25px 70px rgba(0,0,0,.48);
+
+    color: #4b3025;
+
+    opacity: 1 !important;
+
+    transform: none !important;
+
+    transition: none;
+}
+
+
+/* Текст письма */
+
+#letter-content p {
+
+    margin: 0 0 26px;
+
+    font-family:
+        "Segoe Print",
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 21px;
+
+    line-height: 1.9;
+
+    color: #4b3025;
+
+    text-align: left;
+}
+
+
+/* Верхняя подпись */
+
+.letter-sign {
+
+    position: absolute;
+
+    top: 30px;
+    left: 45px;
+
+    font-family:
+        "Segoe Print",
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 26px;
+
+    color: #6e382c;
+
+    transform: rotate(-4deg);
+
+    opacity: .78;
+}
+
+
+/* Дата */
+
+.letter-date {
+
+    position: absolute;
+
+    top: 38px;
+    right: 55px;
+
+    font-family:
+        "Segoe Print",
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 20px;
+
+    color: #7a3b2e;
+
+    transform: rotate(3deg);
+
+    opacity: .68;
+}
+
+
+/* Закрытие */
+
+#close-letter {
+
+    position: absolute;
+
+    top: 15px;
+    right: 22px;
+
+    padding: 5px;
+
+    background: transparent;
+
+    color: #a34b62;
+
+    border: none;
+
+    box-shadow: none;
+
+    font-size: 34px;
+
+    z-index: 10;
+}
+
+#close-letter:hover {
+
+    background: transparent;
+
+    color: #d63384;
+
+    transform: scale(1.12);
+}
+
+
+/* =========================================================
+   13. СТРАНИЦЫ ПИСЬМА
+========================================================= */
+
+.letter-page {
+    display: none;
+}
+
+.letter-page.active {
+    display: block;
+}
+
+
+/* =========================================================
+   15. КВИЗ
+========================================================= */
+
+#quiz {
+
+    position: fixed !important;
+
+    inset: 0 !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+
+    box-sizing: border-box;
+
+    padding: 20px;
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            rgba(214,51,132,.20),
+            transparent 42%
+        ),
+        linear-gradient(
+            135deg,
+            #160b12 0%,
+            #2a0d1d 50%,
+            #10070d 100%
+        );
+
+    z-index: 2147483647 !important;
+}
+
+#quiz .question-content {
+
+    width: min(90%, 560px);
+
+    box-sizing: border-box;
+
+    padding: 45px 40px;
+
+    border-radius: 32px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7fa,
+            #ffeef4
+        );
+
+    border: 1px solid rgba(255,255,255,.9);
+
+    box-shadow:
+        0 25px 70px rgba(70,15,40,.40),
+        0 0 0 6px rgba(255,255,255,.10);
+
+    text-align: center;
+}
+
+#quiz .quiz-question {
+
+    color: #573846;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 23px;
+
+    line-height: 1.5;
+}
+
+#quiz .answer {
+
+    width: 100%;
+
+    box-sizing: border-box;
+
+    margin: 10px 0;
+
+    padding: 17px 22px;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff5f8,
+            #ffe6ef
+        );
+
+    color: #7a294d;
+
+    border: 1px solid rgba(214,51,132,.16);
+
+    box-shadow:
+        0 6px 16px rgba(214,51,132,.10);
+
+    font-size: 18px;
+
+    font-weight: 600;
+}
+
+#quiz .answer:hover {
+
+    transform: translateY(-3px);
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffeaf2,
+            #ffd8e6
+        );
+
+    box-shadow:
+        0 12px 26px rgba(214,51,132,.20);
+}
+
+
+/* =========================================================
+   16. INTRO
+========================================================= */
+
+#intro {
+
+    position: fixed !important;
+
+    inset: 0 !important;
+
+    min-height: 100vh;
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px 25px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(255,105,160,.18),
+            transparent 42%
+        ),
+        linear-gradient(
+            135deg,
+            #fff0f5 0%,
+            #ffe0eb 50%,
+            #fff7fa 100%
+        );
+
+    z-index: 99999;
+}
+
+#intro h1 {
+
+    font-size: clamp(42px,7vw,68px);
+
+    color: #c72f70;
+}
+
+#intro-text {
+
+    width: min(90%, 620px);
+
+    margin: 0 auto 35px;
+
+    font-family:
+        "Segoe Print",
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 20px;
+
+    line-height: 1.8;
+
+    color: #633b4b;
+}
+
+#intro #start-btn {
+
+    padding: 17px 42px;
+
+    border-radius: 50px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff5c96,
+            #d63384
+        );
+
+    color: white;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 12px 30px rgba(214,51,132,.25);
+}
+
+#intro #start-btn:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 17px 38px rgba(214,51,132,.34);
+}
+
+
+/* =========================================================
+   17. НОЧНОЙ РЕЖИМ
+========================================================= */
+
+body.dark {
+
+    background:
+        radial-gradient(
+            circle at 20% 15%,
+            rgba(92,70,160,.22),
+            transparent 32%
+        ),
+        radial-gradient(
+            circle at 80% 10%,
+            rgba(70,120,190,.16),
+            transparent 30%
+        ),
+        linear-gradient(
+            180deg,
+            #050814 0%,
+            #0b1325 45%,
+            #11182d 100%
+        );
+
+    color: #f1edf7;
+}
+
+
+/* Ночной header */
+
+body.dark header {
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(100,90,190,.16),
+            transparent 42%
+        ),
+        linear-gradient(
+            180deg,
+            #070b18,
+            #0c1426
+        );
+}
+
+body.dark header::before {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(20,32,60,.68),
+            rgba(25,18,52,.48)
+        );
+
+    border-color:
+        rgba(150,180,255,.12);
+
+    box-shadow:
+        0 30px 80px rgba(0,0,0,.42),
+        inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+
+/* Ночные заголовки */
+
+body.dark h1,
+body.dark h2,
+body.dark h3 {
+
+    color: #f4d9e7;
+
+    text-shadow:
+        0 0 20px rgba(210,150,220,.18);
+}
+
+
+/* Текст */
+
+body.dark #header-text {
+
+    color: #d9d6e7;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(30,40,68,.68),
+            rgba(40,25,58,.58)
+        );
+
+    border-color:
+        rgba(150,180,255,.12);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.25),
+        inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+
+/* Ночные кнопки */
+
+body.dark header #memory-btn {
+
+    background:
+        linear-gradient(
+            135deg,
+            #a85d91,
+            #754d91
+        );
+
+    box-shadow:
+        0 12px 30px rgba(130,80,160,.28);
+}
+
+body.dark header #music-btn {
+
+    background:
+        rgba(30,40,65,.72);
+
+    color: #e5c8df;
+
+    border-color:
+        rgba(200,160,220,.18);
+}
+
+
+/* Ночные карточки */
+
+body.dark .story,
+body.dark .gallery,
+body.dark .love-date,
+body.dark .counter,
+body.dark .event,
+body.dark .timeline-content {
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(22,31,52,.78),
+            rgba(29,23,48,.72)
+        );
+
+    border-color:
+        rgba(150,170,220,.12);
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.25),
+        inset 0 1px 0 rgba(255,255,255,.04);
+
+    color: #e7e2ed;
+}
+
+body.dark .story p,
+body.dark .event p,
+body.dark .love-date p {
+
+    color: #c9c5d5;
+}
+
+body.dark #days {
+    color: #e9a5c8;
+}
+
+
+/* Ночная галерея */
+
+body.dark .photos img {
+
+    border-color:
+        rgba(255,255,255,.10);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,.45);
+}
+
+
+/* =========================================================
+   18. НОЧНОЕ ПИСЬМО
+========================================================= */
+
+body.dark #letter-window {
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(100,70,140,.12),
+            transparent 45%
+        ),
+        rgba(3,5,14,.88);
+}
+
+
+/* Сам лист */
+
+body.dark #letter-content {
+
+    background-color: #211b2b;
+
+    background-image:
+
+        repeating-linear-gradient(
+            to bottom,
+            transparent 0,
+            transparent 33px,
+            rgba(180,150,220,.09) 34px,
+            transparent 35px
+        ),
+
+        radial-gradient(
+            circle at 20% 15%,
+            rgba(220,120,180,.10),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 80% 75%,
+            rgba(100,110,210,.10),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 50% 50%,
+            rgba(255,255,255,.025),
+            transparent 60%
+        );
+
+    border-color:
+        rgba(220,170,210,.18);
+
+    box-shadow:
+        inset 0 0 90px rgba(0,0,0,.28),
+        0 25px 70px rgba(0,0,0,.70),
+        0 0 60px rgba(130,80,170,.12);
+
+    color: #eee1eb;
+}
+
+
+/* Текст ночного письма */
+
+body.dark #letter-content p {
+
+    color: #eadde7;
+}
+
+
+/* Подпись и дата */
+
+body.dark .letter-sign {
+
+    color: #f2a9c9;
+}
+
+body.dark .letter-date {
+
+    color: #d8a8c7;
+}
+
+
+/* Крестик */
+
+body.dark #close-letter {
+
+    color: #f0a7c7;
+}
+
+body.dark #close-letter:hover {
+
+    color: #ffd0e1;
+}
+
+
+/* =========================================================
+   19. НОЧНОЙ INTRO
+========================================================= */
+
+body.dark #intro {
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(100,80,170,.18),
+            transparent 42%
+        ),
+        linear-gradient(
+            135deg,
+            #060914,
+            #10162a 55%,
+            #171226
+        );
+}
+
+body.dark #intro h1 {
+
+    color: #f1cfe0;
+
+    text-shadow:
+        0 0 25px rgba(210,150,220,.22);
+}
+
+body.dark #intro-text {
+
+    color: #d4d0df;
+}
+
+
+/* =========================================================
+   20. НОЧНЫЕ ЗВЁЗДЫ / ЛУНА
+========================================================= */
+
+body.dark #stars {
+    opacity: 1;
+}
+
+body.dark #moon {
+
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+
+/* =========================================================
+   21. ПЕРЕКЛЮЧАТЕЛЬ ТЕМЫ
+========================================================= */
+
+#theme-btn {
+
+    z-index: 9999999 !important;
+}
+
+body.dark #theme-btn {
+
+    background: #1b2948;
+
+    box-shadow:
+        0 0 20px rgba(120,170,255,.28);
+}
+
+body.dark #theme-btn .switch {
+
+    left: 36px;
+
+    background: #f5f1ff;
+}
+
+dark #intro {
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(100,80,170,.18),
+            transparent 42%
+        ),
+        linear-gradient(
+            135deg,
+            #060914,
+            #10162a 55%,
+            #171226
+        );
+}
+
+body.dark #intro h1 {
+
+    color: #f1cfe0;
+
+    text-shadow:
+        0 0 25px rgba(210,150,220,.22);
+}
+
+body.dark #intro-text {
+
+    color: #d4d0df;
+}
+
+
+/* =========================================================
+   20. НОЧНЫЕ ЗВЁЗДЫ / ЛУНА
+========================================================= */
+
+body.dark #stars {
+    opacity: 1;
+}
+
+body.dark #moon {
+
+    opacity: 1;
+
+    transform: scale(1);
+}
+
+
+/* =========================================================
+   21. ПЕРЕКЛЮЧАТЕЛЬ ТЕМЫ
+========================================================= */
+
+#theme-btn {
+
+    z-index: 9999999 !important;
+}
+
+body.dark #theme-btn {
+
+    background: #1b2948;
+
+    box-shadow:
+        0 0 20px rgba(120,170,255,.28);
+}
+
+body.dark #theme-btn .switch {
+
+    left: 36px;
+
+    background: #f5f1ff;
+}
+
+
+/* =========================================================
+   22. МОБИЛЬНАЯ АДАПТАЦИЯ
+========================================================= */
+
+@media (max-width: 700px) {
+
+    header::before {
+
+        width: 94vw;
+
+        height: 570px;
+
+        border-radius: 30px;
+    }
+
+    header {
+
+        padding:
+            50px 18px;
+    }
+
+    #header-text {
+
+        padding:
+            22px 20px;
+
+        font-size: 17px;
+
+        line-height: 1.7;
+    }
+
+    header #memory-btn,
+    header #music-btn {
+
+        min-width: 0;
+
+        width: min(90vw, 340px);
+    }
+
+    .story,
+    .gallery,
+    .love-date,
+    .counter {
+
+        width: 92%;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .photos img {
+
+        width: min(82vw, 300px);
+
+        height: min(82vw, 300px);
+    }
+
+    #letter-window {
+
+        padding: 12px;
+    }
+
+    #letter-content {
+
+        width: 96vw;
+
+        height: 94vh;
+
+        padding:
+            70px 25px 40px;
+
+        border-radius: 14px;
+    }
+
+    #letter-content p {
+
+        font-size: 18px;
+
+        line-height: 1.8;
+    }
+
+    .letter-sign {
+
+        left: 25px;
+
+        font-size: 22px;
+    }
+
+    .letter-date {
+
+        right: 25px;
+
+        font-size: 17px;
+    }
+
+    #close-letter {
+
+        top: 12px;
+
+        right: 15px;
+
+        font-size: 30px;
+    }
+
+    #timer {
+
+        gap: 12px;
+    }
+
+    #timer div {
+
+        width: 105px;
+
+        height: 105px;
+
+        border-radius: 24px;
+    }
+
+    #timer span {
+
+        font-size: 35px;
+    }
+
+    #timer p {
+
+        font-size: 15px;
+    }
+
+    #quiz .question-content {
+
+        width: 94%;
+
+        padding:
+            35px 22px;
+
+        border-radius: 25px;
+    }
+
+    #quiz .quiz-question {
+
+        font-size: 20px;
+    }
+}
+
+/* =========================
+   ФИНАЛЬНОЕ ОФОРМЛЕНИЕ ПИСЬМА
+========================= */
+
+#letter-content .letter-page {
+    padding-top: 15px;
+}
+
+#letter-content .letter-page > p {
+    margin: 0 0 30px;
+    padding: 0;
+
+    font-family: "Segoe Print", "Comic Sans MS", cursive;
+    font-size: 21px;
+    line-height: 1.9;
+
+    color: #4b3025;
+    text-align: left;
+
+    text-indent: 0;
+}
+
+/* Первый абзац */
+#letter-content .letter-page > p:first-child {
+    margin-top: 25px;
+    margin-bottom: 38px;
+
+    font-size: 27px;
+    font-weight: 600;
+}
+
+/* Цитата */
+#letter-content .letter-page .letter-quote {
+    margin: 25px 20px 35px;
+    padding: 18px 25px;
+
+    border-left: 3px solid #d98a8a;
+    border-radius: 0 15px 15px 0;
+
+    background: rgba(255, 255, 255, .18);
+
+    font-size: 22px;
+    line-height: 1.8;
+
+    font-style: italic;
+}
+
+/* Финальные фразы */
+#letter-content .letter-page .letter-final {
+    margin-top: 40px;
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    font-size: 24px;
+    line-height: 1.8;
+}
+
+/* Подпись */
+#letter-content .letter-page .letter-signature {
+    margin-top: 50px;
+    margin-bottom: 10px;
+
+    text-align: right;
+
+    font-size: 25px;
+    font-style: italic;
+
+    color: #7a3b4d;
+}
+
+/* Ночной режим */
+body.dark #letter-content .letter-page > p {
+    color: #f1dce5;
+}
+
+body.dark #letter-content .letter-page .letter-quote {
+    background: rgba(255, 255, 255, .04);
+    border-left-color: rgba(255, 160, 195, .55);
+}
+
+body.dark #letter-content .letter-page .letter-signature {
+    color: #ffabc9;
+}
+
+/* Телефон */
+@media (max-width: 600px) {
+
+    #letter-content {
+        width: 94%;
+        height: 90vh;
+        padding: 55px 25px 40px;
+    }
+
+    #letter-content .letter-page > p {
+        font-size: 18px;
+        line-height: 1.8;
+        margin-bottom: 27px;
+    }
+
+    #letter-content .letter-page > p:first-child {
+        font-size: 23px;
+        margin-bottom: 32px;
+    }
+
+    #letter-content .letter-page .letter-quote {
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 15px 18px;
+        font-size: 19px;
+    }
+
+    #letter-content .letter-page .letter-final {
+        font-size: 21px;
+    }
+
+    #letter-content .letter-page .letter-signature {
+        font-size: 22px;
+    }
+}
+
+/* =====================================================
+   СТИХИ
+===================================================== */
+
+.poems-section {
+    position: relative;
+
+    width: min(100% - 40px, 1050px);
+
+    margin: 90px auto;
+    padding: 80px 20px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+}
+
+
+/* Заголовок */
+
+.poems-heading {
+    margin-bottom: 60px;
+}
+
+.poems-kicker {
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-family: "Segoe Print", "Comic Sans MS", cursive;
+
+    font-size: 16px;
+
+    color: #b85b7b;
+
+    letter-spacing: 1px;
+}
+
+.poems-heading h2 {
+    margin: 0 0 15px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: clamp(34px, 5vw, 48px);
+
+    color: #d63384;
+
+    text-shadow:
+        0 5px 20px rgba(214, 51, 132, .15);
+}
+
+.poems-heading p {
+    margin: 0 auto;
+
+    max-width: 600px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #765765;
+}
+
+
+/* Список стихов */
+
+.poems-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 55px;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+
+/* Карточка */
+
+.poem-card {
+    position: relative;
+
+    display: flex;
+
+    text-align: left;
+
+    overflow: hidden;
+
+    padding: 55px 55px 55px 80px;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(255, 190, 215, .30),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, .96),
+            rgba(255, 246, 250, .92)
+        );
+
+    border: 1px solid rgba(214, 51, 132, .10);
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 55px rgba(180, 70, 110, .12),
+        inset 0 1px 0 rgba(255,255,255,.95);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.poem-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 28px 65px rgba(180, 70, 110, .18),
+        inset 0 1px 0 rgba(255,255,255,.95);
+}
+
+
+/* Номер */
+
+.poem-number {
+    position: absolute;
+
+    top: 25px;
+    left: 28px;
+
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+
+    color: rgba(214, 51, 132, .45);
+
+    letter-spacing: 2px;
+}
+
+
+/* Декоративная линия */
+
+.poem-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 35px;
+    top: 75px;
+    bottom: 55px;
+
+    width: 2px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(214, 51, 132, .25),
+            transparent
+        );
+}
+
+
+/* Контент */
+
+.poem-content {
+    width: 100%;
+}
+
+
+/* Название */
+
+.poem-content h3 {
+    margin: 0 0 35px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 30px;
+
+    color: #b93668;
+
+    font-weight: 600;
+}
+
+
+/* Сам стих */
+
+.poem-text {
+    font-family:
+        "Segoe Print",
+        "Comic Sans MS",
+        cursive;
+
+    color: #533641;
+
+    font-size: 19px;
+
+    line-height: 2;
+
+    letter-spacing: .15px;
+}
+
+.poem-text p {
+    margin: 0 0 32px;
+
+    font-size: inherit;
+
+    line-height: inherit;
+
+    color: inherit;
+}
+
+.poem-text p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* Маленький декоративный элемент */
+
+.poem-content::after {
+    content: "♥";
+
+    display: block;
+
+    margin-top: 35px;
+
+    color: rgba(214, 51, 132, .45);
+
+    font-size: 18px;
+
+    text-align: center;
+}
+
+
+/* =====================================================
+   НОЧНОЙ РЕЖИМ
+===================================================== */
+
+body.dark .poems-section {
+    color: #f5e8ee;
+}
+
+body.dark .poems-kicker {
+    color: #d98aa5;
+}
+
+body.dark .poems-heading h2 {
+    color: #ffabc9;
+
+    text-shadow:
+        0 5px 25px rgba(255, 120, 170, .18);
+}
+
+body.dark .poems-heading p {
+    color: #cdb7c2;
+}
+
+
+/* Ночная карточка */
+
+body.dark .poem-card {
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(255, 100, 160, .09),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(34, 22, 39, .96),
+            rgba(25, 19, 34, .96)
+        );
+
+        border-color: rgba(255, 170, 200, .12);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.38),
+        inset 0 1px 0 rgba(255,255,255,.05);
+}
+
+body.dark .poem-card:hover {
+    box-shadow:
+        0 30px 75px rgba(0,0,0,.48),
+        0 0 35px rgba(190, 90, 150, .08);
+}
+
+body.dark .poem-number {
+    color: rgba(255, 170, 200, .42);
+}
+
+body.dark .poem-card::before {
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(255, 150, 190, .22),
+            transparent
+        );
+}
+
+body.dark .poem-content h3 {
+    color: #ffabc9;
+}
+
+body.dark .poem-text {
+    color: #ead8e1;
+}
+
+body.dark .poem-content::after {
+    color: rgba(255, 160, 195, .55);
+}
+
+
+/* =====================================================
+   МОБИЛЬНЫЕ
+===================================================== */
+
+@media (max-width: 700px) {
+
+    .poems-section {
+        width: min(100% - 24px, 1050px);
+
+        margin: 60px auto;
+
+        padding: 60px 6px;
+    }
+
+    .poems-heading {
+        margin-bottom: 40px;
+    }
+
+    .poems-heading h2 {
+        font-size: 35px;
+    }
+
+    .poems-heading p {
+        font-size: 16px;
+    }
+
+    .poem-card {
+        padding: 50px 25px 40px 45px;
+
+        border-radius: 24px;
+    }
+
+    .poem-card::before {
+        left: 25px;
+        top: 70px;
+        bottom: 40px;
+    }
+
+    .poem-number {
+        left: 20px;
+        top: 20px;
+    }
+
+    .poem-content h3 {
+        font-size: 26px;
+
+        margin-bottom: 25px;
+    }
+
+    .poem-text {
+        font-size: 17px;
+
+        line-height: 1.9;
+    }
+
+    .poem-text p {
+        margin-bottom: 27px;
+    }
+}
+
+/* =====================================================
+   СТИХ ОТ НЕЁ
+===================================================== */
+
+.poem-author {
+    display: inline-block;
+
+    margin-bottom: 14px;
+
+    padding: 6px 14px;
+
+    border-radius: 30px;
+
+    background: rgba(214, 51, 132, .08);
+
+    border: 1px solid rgba(214, 51, 132, .12);
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 13px;
+
+    font-style: italic;
+
+    letter-spacing: .8px;
+
+    text-transform: lowercase;
+
+    color: #b85b7b;
+}
+
+
+/* Немного отличаем её стих */
+
+.poem-from-her {
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(255, 170, 205, .32),
+            transparent 32%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(255, 250, 252, .97),
+            rgba(255, 239, 247, .94)
+        );
+}
+
+
+/* Ночной режим */
+
+body.dark .poem-from-her {
+    background:
+        radial-gradient(
+            circle at 85% 15%,
+            rgba(255, 100, 170, .11),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(38, 23, 42, .98),
+            rgba(29, 20, 38, .98)
+        );
+}
+
+body.dark .poem-author {
+    color: #ffabc9;
+
+    background: rgba(255, 150, 190, .07);
+
+    border-color: rgba(255, 160, 195, .15);
+}
+
+
+/* Мобильный */
+
+@media (max-width: 700px) {
+
+    .poem-author {
+        font-size: 12px;
+    }
+
+}
+
+/* ===== ФИНАЛЬНАЯ ФИКСАЦИЯ ОКНА ПИСЬМА ===== */
+
+#letter-window {
+    position: fixed !important;
+    inset: 0 !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+
+    display: none;
+    align-items: center !important;
+    justify-content: center !important;
+
+    padding: 20px !important;
+    box-sizing: border-box !important;
+
+    z-index: 99999 !important;
+
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+
+    margin: 0 !important;
+}
+
+#letter-window.show {
+    display: flex !important;
+}
+
+/* Само содержимое письма */
+#letter-content {
+    position: relative !important;
+
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    transform: none !important;
+
+    width: min(900px, 92vw) !important;
+    max-width: 900px !important;
+
+    max-height: 90vh !important;
+
+    margin: 0 auto !important;
+
+    box-sizing: border-box !important;
+
+    overflow: hidden !important;
+}
+
+/* Крестик */
+#close-letter {
+    position: absolute !important;
+    top: 18px !important;
+    right: 18px !important;
+
+    z-index: 100 !important;
+}
+
+/* Обложка */
+.cover-page {
+    position: relative !important;
+
+    width: 100% !important;
+    box-sizing: border-box !important;
+
+    margin: 0 !important;
+}
+
+/* Страница письма */
+#letter-page {
+    position: relative !important;
+
+    width: 100% !important;
+    box-sizing: border-box !important;
+
+    margin: 0 !important;
+}
+
+/* На всякий случай убираем случайное позиционирование */
+#letter-window *,
+#letter-content * {
+    box-sizing: border-box;
+}
+
+/* =========================================================
+   ПИСЬМО — ФИНАЛЬНАЯ ПОЗИЦИЯ
+   ========================================================= */
+
+#letter-window {
+    position: fixed !important;
+
+    top: 0 !important;
+    left: 0 !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: none !important;
+
+    z-index: 99999 !important;
+
+    /* НЕ зависит от flex родителя */
+    transform: none !important;
+}
+
+/* Затемнение на весь экран */
+#letter-window::before {
+    content: "" !important;
+
+    position: fixed !important;
+
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+
+    background: rgba(0, 0, 0, 0.55) !important;
+
+    z-index: -1 !important;
+
+    pointer-events: none !important;
+}
+
+#letter-window.show {
+    display: block !important;
+}
+
+
+/* =========================================================
+   САМА КАРТОЧКА ПИСЬМА
+   ========================================================= */
+
+#letter-content {
+    position: fixed !important;
+
+    top: 50% !important;
+    left: 50% !important;
+
+    width: min(900px, 92vw) !important;
+    height: min(720px, 86vh) !important;
+
+    margin: 0 !important;
+
+    padding: 0 !important;
+
+    transform: translate(-50%, -50%) !important;
+
+    box-sizing: border-box !important;
+
+    overflow: hidden !important;
+
+    border-radius: 20px !important;
+
+    z-index: 100000 !important;
+}
+
+
+/* =========================================================
+   ОБЛОЖКА
+   ========================================================= */
+
+#letter-window .cover-page {
+    position: absolute !important;
+
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+
+    overflow: hidden !important;
+}
+
+
+/* =========================================================
+   СТРАНИЦА ПИСЬМА
+   ========================================================= */
+
+#letter-window > #letter-content > .letter-page {
+    position: absolute !important;
+
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+
+    padding: 55px 70px 80px !important;
+
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+
+    display: none !important;
+}
+
+#letter-window > #letter-content > .letter-page.active {
+    display: block !important;
+}
+
+
+/* =========================================================
+   ТЕКСТ
+   ========================================================= */
+
+#letter-window .letter-page p {
+    position: static !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    margin: 0 0 22px !important;
+
+    padding: 0 !important;
+
+    transform: none !important;
+
+    text-align: left;
+}
+
+
+/* =========================================================
+   ЦИТАТА
+   ========================================================= */
+
+#letter-window .letter-page .letter-quote {
+    margin: 25px 20px 30px !important;
+
+    text-align: center !important;
+
+    font-style: italic !important;
+}
+
+
+/* =========================================================
+   ФИНАЛ
+   ========================================================= */
+
+#letter-window .letter-page .letter-final {
+    margin-top: 30px !important;
+    margin-bottom: 20px !important;
+
+    text-align: center !important;
+}
+
+#letter-window .letter-page .letter-signature {
+    margin-top: 35px !important;
+
+    text-align: right !important;
+}
+
+
+/* =========================================================
+   КРЕСТИК
+   ========================================================= */
+
+#letter-window #close-letter {
+    position: absolute !important;
+
+    top: 18px !important;
+    right: 20px !important;
+
+    z-index: 100001 !important;
+}
+
+
+/* =========================================================
+   НАЗАД
+   ========================================================= */
+
+#letter-window #back-page {
+    position: absolute !important;
+
+    left: 30px !important;
+    bottom: 20px !important;
+
+    z-index: 100001 !important;
+}
+
+
+/* =========================================================
+   МОБИЛЬНАЯ ВЕРСИЯ
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    #letter-content {
+        width: 96vw !important;
+        height: 90vh !important;
+
+        border-radius: 16px !important;
+    }
+
+    #letter-window > #letter-content > .letter-page {
+        padding: 50px 25px 75px !important;
+    }
+
+}
+
+/* =========================================================
+   ФИНАЛЬНЫЙ ФИКС ОКНА ПИСЬМА
+   НЕ МЕНЯЕТ ОФОРМЛЕНИЕ ПИСЬМА
+   ========================================================= */
+
+/* Само затемнение */
+#letter-window {
+    position: fixed !important;
+
+    inset: 0 !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: none !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    z-index: 99999 !important;
+
+    transform: none !important;
+}
+
+/* Когда письмо открыто */
+#letter-window.show {
+    display: flex !important;
+}
+
+/* УБИРАЕМ проблемное псевдо-затемнение */
+#letter-window::before {
+    display: none !important;
+    content: none !important;
+}
+
+
+/* =========================================================
+   КАРТОЧКА ПИСЬМА
+   ========================================================= */
+
+#letter-window #letter-content {
+    position: relative !important;
+
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    transform: none !important;
+
+    width: min(900px, 92vw) !important;
+    height: min(720px, 86vh) !important;
+
+    max-width: 900px !important;
+    max-height: 86vh !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    overflow: hidden !important;
+
+    flex-shrink: 0 !important;
+
+    z-index: 100000 !important;
+}
+
+
+/* =========================================================
+   ОБЛОЖКА
+   ========================================================= */
+
+#letter-window #letter-content .cover-page {
+    position: absolute !important;
+
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    margin: 0 !important;
+
+    box-sizing: border-box !important;
+}
+
+
+/* =========================================================
+   СТРАНИЦА ПИСЬМА
+   ========================================================= */
+
+#letter-window #letter-content .letter-page {
+    position: absolute !important;
+
+    inset: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    margin: 0 !important;
+
+    padding: 55px 70px 80px !important;
+
+    box-sizing: border-box !important;
+
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+
+    transform: none !important;
+}
+
+
+/* =========================================================
+   ТЕКСТ — НИКАКОГО ПОЗИЦИОНИРОВАНИЯ
+   ========================================================= */
+
+#letter-window #letter-content .letter-page p {
+    position: static !important;
+
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    transform: none !important;
+}
+
+
+/* =========================================================
+   КНОПКА ЗАКРЫТИЯ
+   ========================================================= */
+
+#letter-window #close-letter {
+    position: absolute !important;
+
+    top: 18px !important;
+    right: 20px !important;
+
+    z-index: 100001 !important;
+}
+
+
+/* =========================================================
+   КНОПКА НАЗАД
+   ========================================================= */
+
+#letter-window #back-page {
+    position: absolute !important;
+
+    left: 30px !important;
+    bottom: 20px !important;
+
+    z-index: 100001 !important;
+}
+
+
+/* =========================================================
+   МОБИЛЬНЫЕ
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    #letter-window {
+        padding: 0 !important;
+    }
+
+    #letter-window #letter-content {
+        width: 96vw !important;
+        height: 90vh !important;
+
+        max-height: 90vh !important;
+
+        border-radius: 16px !important;
+    }
+
+    #letter-window #letter-content .letter-page {
+        padding: 50px 25px 75px !important;
+    }
+}
+
+/* =========================================================
+   ОКНО ПИСЬМА — ПОЛНАЯ ИЗОЛЯЦИЯ ОТ САЙТА
+   ========================================================= */
+
+body > #letter-window {
+    position: fixed !important;
+
+    top: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    display: none !important;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    box-sizing: border-box !important;
+
+    transform: none !important;
+
+    z-index: 2147483647 !important;
+
+    background: rgba(0, 0, 0, .55) !important;
+}
+
+body > #letter-window.show {
+    display: flex !important;
+}
+
+
+/* Сама карточка */
+
+body > #letter-window > #letter-content {
+    position: relative !important;
+
+    top: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+
+    transform: none !important;
+
+    width: min(900px, 92vw) !important;
+    height: min(720px, 86vh) !important;
+
+    max-width: 900px !important;
+    max-height: 86vh !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    box-sizing: border-box !important;
+
+    overflow: hidden !important;
+
+    flex: 0 0 auto !important;
+
+    z-index: 2147483647 !important;
+}
+
+
+/* Никаких дополнительных затемнений */
+
+body > #letter-window::before,
+body > #letter-window::after {
+    display: none !important;
+    content: none !important;
+}
+
+
+/* Обложка */
+
+body > #letter-window .cover-page {
+    position: absolute !important;
+
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    margin: 0 !important;
+
+    transform: none !important;
+}
+
+
+/* Страница письма */
+
+body > #letter-window .letter-page {
+    position: absolute !important;
+
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: 100% !important;
+
+    margin: 0 !important;
+
+    transform: none !important;
+
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+}
+
+
+/* Текст */
+
+body > #letter-window .letter-page p {
+    position: static !important;
+
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    transform: none !important;
+}
+
+
+/* Мобильный */
+
+@media (max-width: 700px) {
+
+    body > #letter-window > #letter-content {
+        width: 96vw !important;
+        height: 90vh !important;
+        max-height: 90vh !important;
+    }
+
+}
+
+.photos {
+    position: relative !important;
+}
+
+/* =========================================================
+   СЕКРЕТНЫЕ ВИДЕО
+========================================================= */
+
+.video-secrets {
+    width: min(100% - 40px, 1050px);
+    margin: 100px auto;
+    padding: 80px 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+
+/* Заголовок */
+
+.video-secrets-heading {
+    margin-bottom: 60px;
+}
+
+.video-secrets-heading > span {
+    display: block;
+    margin-bottom: 12px;
+
+    font-family: "Segoe Print", "Comic Sans MS", cursive;
+    font-size: 16px;
+
+    color: #b85b7b;
+    letter-spacing: 1px;
+}
+
+.video-secrets-heading h2 {
+    margin: 0 0 15px;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 5vw, 48px);
+
+    color: #d63384;
+
+    text-shadow:
+        0 5px 20px rgba(214, 51, 132, .15);
+}
+
+.video-secrets-heading p {
+    max-width: 600px;
+    margin: 0 auto;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 18px;
+    line-height: 1.7;
+
+    color: #765765;
+}
+
+
+/* =========================================================
+   СЕТКА
+========================================================= */
+
+.video-secrets-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 28px;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================================
+   КАРТОЧКА
+========================================================= */
+
+.video-secret-card {
+    position: relative;
+
+    min-height: 250px;
+
+    padding: 40px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    cursor: pointer;
+
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(255, 190, 215, .30),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, .96),
+            rgba(255, 246, 250, .94)
+        );
+
+    border: 1px solid rgba(214, 51, 132, .10);
+
+    box-shadow:
+        0 18px 50px rgba(180, 70, 110, .12),
+        inset 0 1px 0 rgba(255,255,255,.95);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.video-secret-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 25px 60px rgba(180, 70, 110, .18),
+        inset 0 1px 0 rgba(255,255,255,.95);
+}
+
+
+/* =========================================================
+   СОДЕРЖИМОЕ КАРТОЧКИ
+========================================================= */
+
+.secret-card-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    min-height: 170px;
+}
+
+.secret-icon {
+    display: block;
+
+    margin-bottom: 18px;
+
+    font-size: 38px;
+}
+
+.secret-card-content h3 {
+    margin: 0 0 14px;
+
+    font-family: Georgia, "Times New Roman", serif;
+
+    font-size: 25px;
+
+    line-height: 1.3;
+
+    color: #b93668;
+
+    font-weight: 600;
+}
+
+.secret-card-content p {
+    max-width: 380px;
+
+    margin: 0 0 20px;
+
+    font-family:
+        "Segoe Print",
+        "Comic Sans MS",
+        cursive;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    color: #6a4a56;
+}
+
+.secret-open {
+    font-family: Georgia, serif;
+
+    font-size: 13px;
+
+    color: #b85b7b;
+
+    letter-spacing: .5px;
+}
+
+
+/* =========================================================
+   ВИДЕО
+   ПОКА СКРЫТО
+========================================================= */
+
+.secret-video {
+    display: none;
+
+    position: absolute;
+
+    inset: 0;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    background: rgba(20, 10, 18, .97);
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.secret-video video {
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    max-width: 100%;
+
+    max-height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 18px;
+}
+
+.secret-close {
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    z-index: 10;
+
+    width: 36px;
+    height: 36px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.15);
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+БОНУС
+========================================================= */
+
+.video-secret-bonus {
+    position: relative;
+
+    max-width: 900px;
+
+    min-height: 250px;
+
+    margin: 45px auto 0;
+
+    padding: 45px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    border-radius: 30px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255, 170, 205, .35),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(255, 249, 252, .98),
+            rgba(255, 235, 245, .96)
+        );
+
+    border: 1px solid rgba(214, 51, 132, .14);
+
+    box-shadow:
+        0 20px 60px rgba(180, 70, 110, .16);
+}
+
+.bonus-content {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.bonus-icon {
+    font-size: 42px;
+
+    margin-bottom: 10px;
+}
+
+.bonus-label {
+    font-family: Georgia, serif;
+
+    font-size: 13px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    color: #b85b7b;
+
+    margin-bottom: 10px;
+}
+
+.bonus-content h3 {
+    margin: 0 0 12px;
+
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    color: #b93668;
+}
+
+.bonus-content p {
+    max-width: 500px;
+
+    margin: 0 0 25px;
+
+    font-family: "Segoe Print", "Comic Sans MS", cursive;
+
+    font-size: 17px;
+
+    line-height: 1.7;
+
+    color: #6a4a56;
+}
+
+.bonus-open {
+    padding: 12px 24px;
+
+    border: none;
+
+    border-radius: 30px;
+
+    background: #d63384;
+
+    color: white;
+
+    font-family: Georgia, serif;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: .3s ease;
+}
+
+.bonus-open:hover {
+    transform: translateY(-2px) scale(1.03);
+}
+
+
+/* Видео бонуса */
+
+.bonus-video {
+    display: none;
+
+    position: absolute;
+
+    inset: 0;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    background: rgba(20, 10, 18, .97);
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.bonus-video video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    border-radius: 18px;
+}
+
+.bonus-close {
+    position: absolute;
+
+    top: 12px;
+    right: 15px;
+
+    z-index: 10;
+
+    width: 36px;
+    height: 36px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.15);
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   НОЧНОЙ РЕЖИМ
+========================================================= */
+
+body.dark .video-secrets-heading > span {
+    color: #d98aa5;
+}
+
+body.dark .video-secrets-heading h2 {
+    color: #ffabc9;
+
+    text-shadow:
+        0 5px 25px rgba(255, 120, 170, .18);
+}
+
+body.dark .video-secrets-heading p {
+    color: #cdb7c2;
+}
+
+body.dark .video-secret-card {
+    background:
+        radial-gradient(
+            circle at 15% 15%,
+            rgba(255, 100, 160, .09),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(34, 22, 39, .96),
+            rgba(25, 19, 34, .96)
+        );
+
+    border-color: rgba(255, 170, 200, .12);
+
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.38);
+}
+
+body.dark .secret-card-content h3 {
+    color: #ffabc9;
+}
+
+body.dark .secret-card-content p {
+    color: #ead8e1;
+}
+
+body.dark .secret-open {
+    color: #d98aa5;
+}
+
+body.dark .video-secret-bonus {
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(255, 100, 170, .11),
+            transparent 45%
+        ),
+        linear-gradient(
+            135deg,
+            rgba(38, 23, 42, .98),
+            rgba(29, 20, 38, .98)
+        );
+
+    border-color: rgba(255, 170, 200, .12);
+}
+
+body.dark .bonus-content h3 {
+    color: #ffabc9;
+}
+
+body.dark .bonus-content p {
+    color: #ead8e1;
+}
+
+body.dark .bonus-label {
+    color: #d98aa5;
+}
+
+
+/* =========================================================
+   МОБИЛЬНАЯ ВЕРСИЯ
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .video-secrets {
+        width: min(100% - 24px, 1050px);
+
+        margin: 60px auto;
+
+        padding: 60px 6px;
+    }
+
+    .video-secrets-heading {
+        margin-bottom: 40px;
+    }
+
+    .video-secrets-heading h2 {
+        font-size: 35px;
+    }
+
+    .video-secrets-heading p {
+        font-size: 16px;
+    }
+
+    .video-secrets-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .video-secret-card {
+        min-height: 230px;
+
+        padding: 30px 22px;
+
+        border-radius: 24px;
+    }
+
+    .secret-card-content h3 {
+        font-size: 23px;
+    }
+
+    .video-secret-bonus {
+        margin-top: 25px;
+
+        padding: 35px 25px;
+
+        border-radius: 24px;
+    }
+
+    .bonus-content h3 {
+        font-size: 27px;
+    }
+
+}
+
+.photos {
+    width: min(100% - 30px, 1000px);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+
+    justify-items: center;
+}
+
+.photos img {
+    display: block;
+
+    width: 100%;
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 24px;
+    border: 4px solid rgba(255, 255, 255, .9);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, .12);
+
+    cursor: pointer;
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.photos img:hover {
+    transform: scale(1.04) rotate(-1deg);
+
+    box-shadow:
+        0 18px 40px rgba(214, 51, 132, .25);
+}
+
+/* Ночной режим */
+
+body.dark .photos img {
+    border-color: rgba(255, 255, 255, .12);
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, .45);
+}
+
+
+/* Телефон */
+
+@media (max-width: 700px) {
+
+    .photos {
+        width: calc(100% - 24px);
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 14px;
+    }
+
+    .photos img {
+        border-radius: 18px;
+        border-width: 3px;
+    }
+}
+
+#lightbox {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+
+    display: none;
+    align-items: center !important;
+    justify-content: center !important;
+
+    margin: 0 !important;
+    padding: 20px !important;
+
+    box-sizing: border-box !important;
+
+    background: rgba(0, 0, 0, 0.94) !important;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    z-index: 999999 !important;
+
+    overflow: hidden !important;
+}
+
+#lightbox.show {
+    display: flex !important;
+}
+
+#lightbox-img {
+    display: block !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    max-width: 90vw !important;
+    max-height: 88vh !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    object-fit: contain !important;
+
+    transform: none !important;
+
+    border-radius: 25px !important;
+
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, 0.8),
+        0 0 35px rgba(255, 255, 255, 0.15) !important;
+}
+
+#lightbox .close-lightbox {
+    position: absolute !important;
+
+    top: 25px !important;
+    right: 35px !important;
+
+    margin: 0 !important;
+    padding: 5px !important;
+
+    background: transparent !important;
+    border: none !important;
+
+    color: white !important;
+    font-size: 40px !important;
+    line-height: 1 !important;
+
+    z-index: 1000000 !important;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    #lightbox {
+        padding: 15px !important;
+    }
+
+    #lightbox-img {
+        max-width: 94vw !important;
+        max-height: 88vh !important;
+        border-radius: 18px !important;
+    }
+
+    #lightbox .close-lightbox {
+        top: 15px !important;
+        right: 18px !important;
+        font-size: 32px !important;
+    }
+}
+
+#lightbox {
+    position: fixed !important;
+
+    inset: 0 !important;
+
+    width: 100vw !important;
+    height: 100vh !important;
+
+    margin: 0 !important;
+    padding: 20px !important;
+
+    box-sizing: border-box !important;
+
+    display: none;
+
+    align-items: center !important;
+    justify-content: center !important;
+
+    background: rgba(0, 0, 0, 0.94) !important;
+
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+
+    z-index: 999999 !important;
+
+    overflow: hidden !important;
+}
+
+#lightbox.show {
+    display: flex !important;
+}
+
+#lightbox-img {
+    position: static !important;
+
+    display: block !important;
+
+    width: auto !important;
+    height: auto !important;
+
+    max-width: 90vw !important;
+    max-height: 88vh !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    transform: none !important;
+
+    object-fit: contain !important;
+
+    border-radius: 25px !important;
+
+    box-shadow:
+        0 20px 70px rgba(0, 0, 0, .8),
+        0 0 35px rgba(255, 255, 255, .15) !important;
+}
+
+#lightbox .close-lightbox {
+    position: absolute !important;
+
+    top: 25px !important;
+    right: 35px !important;
+
+    margin: 0 !important;
+    padding: 5px !important;
+
+    background: transparent !important;
+    border: none !important;
+
+    color: white !important;
+
+    font-size: 40px !important;
+    line-height: 1 !important;
+
+    cursor: pointer;
+
+    z-index: 1000000 !important;
+}
+
+@media (max-width: 700px) {
+
+    #lightbox-img {
+        max-width: 94vw !important;
+        max-height: 88vh !important;
+        border-radius: 18px !important;
+    }
+
+    #lightbox .close-lightbox {
+        top: 15px !important;
+        right: 18px !important;
+        font-size: 32px !important;
+    }
+}
+
+/* =========================================================
+   ФИНАЛЬНАЯ СЕКЦИЯ
+========================================================= */
+
+.final-section {
+    position: relative;
+
+    min-height: 70vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 100px 20px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(214, 51, 132, 0.12),
+            transparent 60%
+        );
+
+    color: #4a3040;
+}
+
+.final-content {
+    position: relative;
+
+    max-width: 700px;
+
+    opacity: 0;
+    transform: translateY(30px);
+
+    animation: finalAppear 1.5s ease forwards;
+
+    animation-delay: 0.3s;
+}
+
+.final-heart {
+    display: block;
+
+    font-size: 46px;
+
+    margin-bottom: 25px;
+
+    animation: finalHeart 2.5s ease-in-out infinite;
+}
+
+.final-content h2 {
+    margin: 0;
+
+    font-size: clamp(38px, 6vw, 64px);
+
+    font-weight: 500;
+
+    color: #d63384;
+
+    letter-spacing: -1px;
+}
+
+.final-date {
+    margin: 25px 0 0;
+
+    font-size: 18px;
+
+    letter-spacing: 5px;
+
+    color: #9b7185;
+}
+
+.final-text {
+    margin: 30px 0 0;
+
+    font-size: 21px;
+
+    line-height: 1.7;
+
+    color: #6d5360;
+}
+
+.final-infinity {
+    margin-top: 45px;
+
+    font-size: 42px;
+
+    font-weight: 300;
+
+    color: #d63384;
+
+    opacity: 0.65;
+}
+
+
+/* Появление */
+
+@keyframes finalAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Лёгкое сердцебиение */
+
+@keyframes finalHeart {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+
+}
+
+
+/* =========================================================
+   ТЁМНАЯ ТЕМА
+========================================================= */
+
+body.dark .final-section {
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(214, 51, 132, 0.16),
+            transparent 60%
+        );
+
+    color: #f5e8ee;
+}
+
+body.dark .final-date {
+    color: rgba(255,255,255,.55);
+}
+
+body.dark .final-text {
+    color: rgba(255,255,255,.72);
+}
+
+
+/* =========================================================
+   МОБИЛЬНАЯ ВЕРСИЯ
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .final-section {
+        min-height: 65vh;
+
+        padding: 80px 20px;
+    }
+
+    .final-heart {
+        font-size: 40px;
+    }
+
+    .final-content h2 {
+        font-size: 40px;
+    }
+
+    .final-date {
+        font-size: 15px;
+
+        letter-spacing: 3px;
+    }
+
+    .final-text {
+        font-size: 18px;
+    }
+
+    .final-infinity {
+        margin-top: 35px;
+
+        font-size: 36px;
+    }
+
+}
+
+/* =========================================================
+   10. НАШ ЖИЗНЕННЫЙ ПУТЬ
+========================================================= */
+
+.timeline {
+    width: min(800px, 90%);
+    margin: 100px auto;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.timeline h2 {
+    text-align: center;
+    margin-bottom: 65px;
+    color: #d63384;
+    font-size: 36px;
+}
+
+
+/* Линия пути */
+
+.timeline::before {
+    content: "";
+
+    position: absolute;
+
+    left: 30px;
+    top: 105px;
+
+    width: 3px;
+    height: 0;
+
+    background: linear-gradient(
+        to bottom,
+        #e88aaa,
+        #d63384
+    );
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 0 10px rgba(214, 51, 132, .25);
+
+    transition: height 1.8s cubic-bezier(.22, 1, .36, 1);
+}
+
+.timeline.line-show::before {
+    height: calc(100% - 105px);
+}
+
+
+/* Элемент */
+
+.timeline-item {
+    display: flex;
+    align-items: flex-start;
+
+    position: relative;
+
+    margin-bottom: 45px;
+
+    opacity: 0;
+    transform: translateY(45px);
+
+    transition:
+        opacity .8s ease,
+        transform .8s cubic-bezier(.22, 1, .36, 1);
+}
+
+
+/* Небольшая задержка для каждого события */
+
+.timeline-item:nth-child(2) {
+    transition-delay: .15s;
+}
+
+.timeline-item:nth-child(3) {
+    transition-delay: .3s;
+}
+
+.timeline-item:nth-child(4) {
+    transition-delay: .45s;
+}
+
+.timeline-item:nth-child(5) {
+    transition-delay: .6s;
+}
+
+.timeline-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Сердечко / иконка */
+
+.timeline-heart {
+    width: 60px;
+    height: 60px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+
+    background: rgba(255, 255, 255, .9);
+
+    border: 3px solid #e88aaa;
+    border-radius: 50%;
+
+    font-size: 25px;
+
+    z-index: 2;
+
+    box-shadow:
+        0 5px 20px rgba(232, 138, 170, .22);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+
+/* Пульсация при появлении */
+
+.timeline-item.show .timeline-heart {
+    animation: timelineHeart .9s ease;
+}
+
+@keyframes timelineHeart {
+
+    0% {
+        transform: scale(.6);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.12);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* Карточка */
+
+.timeline-content {
+    flex: 1;
+
+    margin-left: 25px;
+
+    padding: 22px 25px;
+
+    background:
+        rgba(255, 255, 255, .72);
+
+    border:
+        1px solid rgba(255, 255, 255, .85);
+
+    border-radius: 22px;
+
+    backdrop-filter: blur(8px);
+
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, .08);
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+
+/* Движение карточки при наведении */
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 16px 35px rgba(214, 51, 132, .14);
+}
+
+
+.timeline-content h3 {
+    margin: 0 0 8px;
+
+    color: #d65f89;
+
+    font-size: 22px;
+}
+
+.timeline-content p {
+    margin: 0;
+
+    color: #6d5360;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   ТЁМНАЯ ТЕМА
+========================================================= */
+
+body.dark .timeline-content {
+    background: rgba(255, 255, 255, .08);
+
+    border-color:
+        rgba(255, 255, 255, .15);
+
+    box-shadow:
+        0 10px 28px rgba(0, 0, 0, .25);
+}
+
+body.dark .timeline-heart {
+    background: rgba(30, 15, 25, .8);
+
+    border-color: #e88aaa;
+}
+
+body.dark .timeline-content p {
+    color: rgba(255, 255, 255, .72);
+}
+
+
+/* =========================================================
+   МОБИЛЬНАЯ ВЕРСИЯ
+========================================================= */
+
+@media (max-width: 700px) {
+
+    .timeline {
+        width: 92%;
+        margin: 70px auto;
+    }
+
+    .timeline h2 {
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+
+    .timeline::before {
+        left: 24px;
+        top: 95px;
+    }
+
+    .timeline.line-show::before {
+        height: calc(100% - 95px);
+    }
+
+    .timeline-heart {
+        width: 48px;
+        height: 48px;
+
+        font-size: 20px;
+    }
+
+    .timeline-content {
+        margin-left: 15px;
+
+        padding: 17px;
+
+        border-radius: 18px;
+    }
+
+    .timeline-content h3 {
+        font-size: 19px;
+    }
+
+    .timeline-content p {
+        font-size: 15px;
+    }
+}
+
+.telegram-secret-link {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    width: 80%;
+    max-width: 350px;
+
+    padding: 30px 25px;
+
+    box-sizing: border-box;
+
+    border-radius: 24px;
+
+    background: linear-gradient(
+        135deg,
+        #ffedf5,
+        #fff7fb
+    );
+
+    border: 1px solid rgba(214, 51, 132, .18);
+
+    box-shadow: 0 15px 40px rgba(180, 70, 110, .15);
+
+    color: #b93668;
+
+    text-decoration: none;
+
+    transition: .3s ease;
+
+    text-align: center;
+}
+
+.telegram-secret-link span {
+    font-size: 42px;
+}
+
+.telegram-secret-link strong {
+    font-family: Georgia, serif;
+
+    font-size: 19px;
+}
+
+.telegram-secret-link small {
+    font-family: "Segoe Print", "Comic Sans MS", cursive;
+
+    font-size: 14px;
+
+    color: #8a6572;
+}
+
+.telegram-secret-link:hover {
+    transform: translateY(-3px) scale(1.02);
+}
+
+/* =========================================================
+   TELEGRAM — ВИДЕО-ПОСЛАНИЯ
+========================================================= */
+
+.telegram-card-link {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    color: inherit;
+    text-decoration: none;
+}
+
+.telegram-card-link .secret-card-content {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   TELEGRAM — БОНУС
+========================================================= */
+
+.telegram-bonus-link {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    color: inherit;
+    text-decoration: none;
+}
+
+.telegram-bonus-link .bonus-content {
+    cursor: pointer;
+}
+
+
+/* Небольшой эффект при наведении */
+
+.telegram-card-link:hover .secret-open {
+    transform: translateX(4px);
+}
+
+.telegram-card-link .secret-open {
+    display: inline-block;
+    transition: .25s ease;
+}
+
+
+/* Бонус */
+
+.telegram-bonus-link:hover .bonus-open {
+    transform: translateY(-2px) scale(1.03);
+}
+
+.telegram-bonus-link .bonus-open {
+    display: inline-block;
+    transition: .3s ease;
+}

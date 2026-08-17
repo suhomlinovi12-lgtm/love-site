@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Для тебя</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <button id="theme-btn">
+    <span class="moon">🌙</span>
+    <span class="sun">☀️</span>
+    <span class="switch"></span>
+</button>
+
+    <div id="intro">
+
+    <h1>❤️ Добро пожаловать ❤️</h1>
+
+<p id="intro-text">
+    Этот маленький мир был создан только для одного человека.
+    <br><br>
+    Если это действительно ты, докажи это.
+    <br>
+    Ответь на несколько вопросов о нашей истории.
+</p>
+
+<button id="start-btn">
+    ✨ Начать
+</button>
+
+</div>
+
+<div id="quiz">
+
+    <div class="question-content">
+        
+        <h2 id="quiz-title"> ❤️ Вопрос 1 из 3</h2>
+
+        <p class="quiz-question" id="quiz-question">
+
+            Когда началась наша история?
+
+        </p>
+
+        <p id="quiz-message"></p>
+
+        <button class="answer">
+            8 июля 2025
+        </button>
+
+        <button class="answer">
+            7 июня 2025
+        </button>
+
+        <button class="answer">
+            24 мая 2025
+        </button>
+
+    </div>
+
+</div>
+
+<div id="site-content">
+
+    <div id="stars"></div>
+
+    <div id="moon"></div>
+
+    <div id="clouds">
+    <div class="cloud cloud1"></div>
+    <div class="cloud cloud2"></div>
+    <div class="cloud cloud3"></div>
+</div>
+
+<div id="meteors">
+    <span class="meteor meteor1"></span>
+    <span class="meteor meteor2"></span>
+    <span class="meteor meteor3"></span>
+</div>
+    
+    <div class="hearts"></div>
+    
+<header>
+    <h1 id="typing-title"></h1>
+
+    <p id="header-text">
+        Этот сайт я сделал специально для тебя.
+        Здесь будут наши воспоминания, фотографии и моменты.
+    </p>
+    
+    <button id="memory-btn">
+    Открыть наши воспоминания
+</button>
+
+<button id="music-btn">
+    🎵 Включить нашу песню
+</button>
+
+<audio id="music" loop>
+    <source src="music/song.mp3" type="audio/mpeg">
+</audio>
+</header>
+
+<section class="story hidden" id="story">
+
+    <h2>Наша история ❤️</h2>
+    
+    <section class="love-date hidden">
+
+    <h2>❤️ Всё началось...</h2>
+
+    <p>8 июля 2025 года</p>
+
+</section>
+<section class="counter hidden">
+
+    <h2>❤️ Мы вместе уже</h2>
+
+    <div id="timer">
+
+    <div>
+        <span id="days">0</span>
+        <p>дней</p>
+    </div>
+
+    <div>
+        <span id="hours">0</span>
+        <p>часов</p>
+    </div>
+
+    <div>
+        <span id="minutes">0</span>
+        <p>минут</p>
+    </div>
+
+    <div>
+        <span id="seconds">0</span>
+        <p>секунд</p>
+    </div>
+
+</div>
+
+</section>
+
+<section class="letter hidden">
+
+    <button id="open-letter">
+        💌 Открыть письмо
+    </button>
+
+</section>
+
+<section class="poems-section" id="poems">
+
+    <div class="poems-heading">
+        <span class="poems-kicker">немного моих слов для тебя</span>
+        <h2>Наши стихи ❤️</h2>
+        <p>То, что хотелось сказать тебе не обычными словами...</p>
+    </div>
+
+    <div class="poems-list">
+
+        <!-- СТИХ 1 -->
+        <article class="poem-card">
+
+            <div class="poem-number">01</div>
+
+            <div class="poem-content">
+
+                <h3>Её глаза</h3>
+
+                <div class="poem-text">
+                    <p>
+                        Её глаза цвета моря,<br>
+                        я в них безудержно тону.<br>
+                        Утопая в них, не знаю горя,<br>
+                        Её одну безумно я люблю.
+                    </p>
+
+                    <p>
+                        Её глаза цвета неба,<br>
+                        В них глядя, я от счастья улетаю ввысь.<br>
+                        И не нужно мне ни воды, ни сна, ни хлеба,<br>
+                        Молюсь чтоб вечность с нею быть, и ты прошу, молись
+                    </p>
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <!-- СТИХ 2 -->
+        <article class="poem-card">
+
+            <div class="poem-number">02</div>
+
+            <div class="poem-content">
+
+                <h3>Моё солнце</h3>
+
+                <div class="poem-text">
+                    <p>
+                        на небе солнце светит ясно,<br>
+                        дарит людям лучики тепла.<br>
+                        и оно конечно же прекрасно,<br>
+                        но увы не для меня..<br>
+                        ведь мое солнце в разы прекраснее,<br>
+                        и согревает своей любовью ещё теплей,<br>
+                        и когда она не рядом, я будто всех несчастнее,<br>
+                        каждый миг хочу я быть лишь с ней!
+                    </p>
+
+                    <p>
+                        вокруг так много поводов для счастья,<br>
+                        но моё, за тыщи километров.<br>
+                        и как же я хочу в момент её ненастья,<br>
+                        закрыть её собой, от всех плохих моментов.<br>
+                        я рядом с ней, пусть телом я на расстоянии,<br>
+                        но мыслями, душой и сердцем, с ней.<br>
+                        мы обязательно пройдем все испытания,<br>
+                        и вместе будем до конца, ведь любовь всего сильней!
+                    </p>
+                </div>
+
+            </div>
+
+        </article>
+
+        <div class="poem-card">
+
+    <span class="poem-number">03</span>
+
+    <div class="poem-content">
+
+        <h3>Тайное искусство ❤️</h3>
+
+        <div class="poem-text">
+
+            <p>
+                От одной лишь мысли о тебе меня мурашит,<br>
+                от мысли одной лишь о тебе дрожит всё тело.<br>
+                Как сильно я тебя люблю — время лишь покажет,<br>
+                но без тебя уже жить не могу я, вот в чём дело.
+            </p>
+
+            <p>
+                И ведь значит это что-то, как считаешь?<br>
+                Что стала смыслом жизни ты моей.<br>
+                Ведь голову мою ты неспроста не покидаешь,<br>
+                и стала всех на свете мне важней.
+            </p>
+
+            <p>
+                Момент, когда я осознал, что в тебя влюбился,<br>
+                помню ясно, я даже от осознания в моменте прослезился,<br>
+                ведь от мысли одной о невзаимности мне стало страшно,<br>
+                и, наверное, тогда впервые я о нас молился.
+            </p>
+
+            <p>
+                А дальше всё стремительно и быстро развивалось,<br>
+                и вот, я оглянуться не успел, как парой стали мы.<br>
+                И всё вокруг цвело, и жизнь преображалась,<br>
+                и понял я, что Богом друг другу мы даны.
+            </p>
+
+            <p>
+                Прошло почти полгода, мы на расстоянии,<br>
+                а любовь не угасает, она с каждым днём становится сильнее.<br>
+                И как бы далеко я ни был — я слышу твоё дыхание,<br>
+                и это для меня, как ни крути, всего важнее.
+            </p>
+
+            <p>
+                По сути, мы сейчас проходим испытание,<br>
+                на прочность проверяем наши чувства.<br>
+                Но знаю, что против любви бессильно расстояние,<br>
+                ведь любить, как любим мы, — тайное искусство.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+        <!-- СТИХ ОТ НЕЁ -->
+<article class="poem-card poem-from-her">
+
+    <div class="poem-number">04</div>
+
+    <div class="poem-content">
+
+        <div class="poem-author">
+            от любимой → мне
+        </div>
+
+        <h3>Любовь моя</h3>
+
+        <div class="poem-text">
+
+            <p>
+                Заколдую, зачарую<br>
+                Будешь ты навеки мой<br>
+                Я тебя тааак расцелую<br>
+                Не найдёшь пути домой
+            </p>
+
+            <p>
+                Кто бы, как бы ни старался<br>
+                Нас с тобою разлучить<br>
+                Я хочу чтоб ты остался<br>
+                Со мною раз, и на всю жизнь
+            </p>
+
+            <p>
+                И волшебство не нужно здесь<br>
+                Что бы ты рядом со мной был<br>
+                Ты радость моя, мир мой весь<br>
+                Ты для меня «любовь» открыл
+            </p>
+
+            <p>
+                Рядом с тобой всегда я буду<br>
+                Мне очень грустно без тебя<br>
+                Мои эмоции подобные салюту<br>
+                Когда, смотрю я на тебя
+            </p>
+
+            <p>
+                Ты моя жизнь, моя опора<br>
+                Прекрасный свет очей моих<br>
+                Ты красивей морозного узора<br>
+                Без всяких чар там колдовских
+            </p>
+
+            <p>
+                Всем сердцем я тебя люблю<br>
+                И буду вечность я с тобой<br>
+                Лишь об одном Бога молю<br>
+                Хочу лишь стать твоей семьёй
+            </p>
+
+            <p>
+                Хочу с тобой увидеть мир<br>
+                Хочу семью создать с тобой<br>
+                Ты мой по жизни ориентир<br>
+                Любовь моя, ты мой родной
+            </p>
+
+            <p>
+                Хочу чтоб был красивый дом<br>
+                Хочу иметь там хвостик наш<br>
+                Чтоб каждый день гулял с отцом<br>
+                Пока я делать буду антураж
+            </p>
+
+            <p>
+                А дальше будет всё прекрасней<br>
+                Наша семья, краса вокруг<br>
+                Ты для меня всего на свете ясней<br>
+                Ты самый лучший мой супруг!
+            </p>
+
+        </div>
+
+    </div>
+
+</article>
+
+    </div>
+
+</section>
+
+<section id="map-section">
+
+    <h2>Наш путь ❤️</h2>
+
+    <div class="map-box">
+
+    </div>
+
+</section>
+
+<section class="video-secrets hidden">
+
+    <div class="video-secrets-heading">
+        <span>маленькие секреты для тебя 🤫</span>
+
+        <h2>Открой, когда тебе нужно ❤️</h2>
+
+        <p>
+            Я записал кое-что для разных моментов.
+            Выбирай то, что подходит тебе сейчас.
+        </p>
+    </div>
+
+
+    <div class="video-secrets-grid">
+
+        <!-- 1 -->
+<article class="video-secret-card">
+
+    <a
+        href="https://t.me/paraminovia08072025/2"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="telegram-card-link"
+    >
+
+        <div class="secret-card-content">
+            <span class="secret-icon">🌙</span>
+
+            <h3>Тебе грустно</h3>
+
+            <p>
+                Если сегодня всё немного не так — открой это.
+            </p>
+
+            <span class="secret-open">
+                нажми, чтобы открыть →
+            </span>
+        </div>
+
+    </a>
+
+</article>
+
+
+        <!-- 2 -->
+<article class="video-secret-card">
+
+    <a
+        href="https://t.me/paraminovia08072025/21"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="telegram-card-link"
+    >
+
+        <div class="secret-card-content">
+            <span class="secret-icon">☀️</span>
+
+            <h3>У тебя хорошее настроение</h3>
+
+            <p>
+                А значит, самое время сделать его ещё лучше.
+            </p>
+
+            <span class="secret-open">
+                нажми, чтобы открыть →
+            </span>
+        </div>
+
+    </a>
+
+</article>
+
+
+       <!-- 3 -->
+<article class="video-secret-card">
+
+    <a
+        href="https://t.me/paraminovia08072025/24"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="telegram-card-link"
+    >
+
+        <div class="secret-card-content">
+            <span class="secret-icon">🫂</span>
+
+            <h3>Ты сильно скучаешь по мне</h3>
+
+            <p>
+                Тогда у меня есть кое-что специально для тебя.
+            </p>
+
+            <span class="secret-open">
+                нажми, чтобы открыть →
+            </span>
+        </div>
+
+    </a>
+
+</article>
+
+
+        <!-- 4 -->
+<article class="video-secret-card">
+
+    <a
+        href="https://t.me/paraminovia08072025/26"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="telegram-card-link"
+    >
+
+        <div class="secret-card-content">
+            <span class="secret-icon">🥺</span>
+
+            <h3>Ты плачешь</h3>
+
+            <p>
+                Пожалуйста, посмотри это. Я хочу быть рядом.
+            </p>
+
+            <span class="secret-open">
+                нажми, чтобы открыть →
+            </span>
+        </div>
+
+    </a>
+
+</article>
+
+
+        <!-- 5 -->
+<article class="video-secret-card">
+
+    <a
+        href="https://t.me/paraminovia08072025/28"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="telegram-card-link"
+    >
+
+        <div class="secret-card-content">
+            <span class="secret-icon">😴</span>
+
+            <h3>Ты устала</h3>
+
+            <p>
+                Остановись на минутку и просто побудь со мной.
+            </p>
+
+            <span class="secret-open">
+                нажми, чтобы открыть →
+            </span>
+        </div>
+
+    </a>
+
+</article>
+
+
+       <!-- 6 -->
+<article class="video-secret-card">
+
+    <a
+        href="https://t.me/paraminovia08072025/30"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="telegram-card-link"
+    >
+
+        <div class="secret-card-content">
+            <span class="secret-icon">💔</span>
+
+            <h3>Ты на меня обиделась</h3>
+
+            <p>
+                Даже если сердишься — всё равно открой.
+            </p>
+
+            <span class="secret-open">
+                нажми, чтобы открыть →
+            </span>
+        </div>
+
+    </a>
+
+</article>
+
+
+        <!-- 7 -->
+<article class="video-secret-card">
+
+    <a
+        href="https://t.me/paraminovia08072025/32"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="telegram-card-link"
+    >
+
+        <div class="secret-card-content">
+            <span class="secret-icon">🌌</span>
+
+            <h3>Ты переживаешь за будущее</h3>
+
+            <p>
+                Если страшно думать о том, что будет дальше.
+            </p>
+
+            <span class="secret-open">
+                нажми, чтобы открыть →
+            </span>
+        </div>
+
+    </a>
+
+</article>
+
+<!-- 8 -->
+<article class="video-secret-card">
+
+    <a
+        href="https://t.me/paraminovia08072025/34"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="telegram-card-link"
+    >
+
+        <div class="secret-card-content">
+            <span class="secret-icon">💋</span>
+
+            <h3>Хочешь целовашек и обнимашек</h3>
+
+            <p>
+                Ну тут, кажется, всё очевидно… 🫂
+            </p>
+
+            <span class="secret-open">
+                нажми, чтобы открыть →
+            </span>
+        </div>
+
+    </a>
+
+</article>
+        
+
+    </div>
+
+
+    <!-- БОНУС -->
+<article class="video-secret-bonus">
+
+    <a
+        href="https://t.me/paraminovia08072025/36"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="telegram-bonus-link"
+    >
+
+        <div class="bonus-content">
+
+            <span class="bonus-icon">🎵</span>
+
+            <span class="bonus-label">маленький бонус</span>
+
+            <h3>Песня для тебя</h3>
+
+            <p>
+                Потому что иногда вместо слов
+                лучше просто включить музыку.
+            </p>
+
+            <span class="bonus-open">
+                Открыть бонус ❤️
+            </span>
+
+        </div>
+
+    </a>
+
+</article>
+
+</section>
+
+<section class="timeline">
+
+    <h2>Наш жизненный путь ❤️</h2>
+
+    <div class="timeline-item">
+        <div class="timeline-heart">❤️</div>
+
+        <div class="timeline-content">
+            <h3>08.07.2025</h3>
+            <p>День, когда началась наша история.</p>
+        </div>
+    </div>
+
+
+    <div class="timeline-item">
+        <div class="timeline-heart">✈️</div>
+
+        <div class="timeline-content">
+            <h3>21.09.2025</h3>
+            <p>День, когда расстояние стало частью нашей истории.</p>
+        </div>
+    </div>
+
+
+    <div class="timeline-item">
+        <div class="timeline-heart">🏠</div>
+
+        <div class="timeline-content">
+            <h3>2026</h3>
+            <p>Ты в Украине, я в Дании.</p>
+        </div>
+    </div>
+
+
+    <div class="timeline-item">
+        <div class="timeline-heart">🌅</div>
+
+        <div class="timeline-content">
+            <h3>Будущее</h3>
+            <p>Наша мечта — Испания ❤️</p>
+        </div>
+    </div>
+
+</section>
+
+<section class="gallery hidden">
+
+    <h2>Наши моменты 📸</h2>
+
+    <div class="photos">
+    <img src="images/images/test.jpg">
+    <img src="images/images/photo2.jpg">
+    <img src="images/images/photo3.jpg">
+    <img src="images/images/photo4.jpg">
+    <img src="images/images/photo5.jpg">
+    <img src="images/images/photo6.jpg">
+    <img src="images/images/photo7.jpg">
+    <img src="images/images/photo8.jpg">
+    <img src="images/images/photo9.jpg">
+    <img src="images/images/photo10.jpg">
+    <img src="images/images/photo11.jpg">
+    <img src="images/images/photo12.jpg">
+    <img src="images/images/photo13.jpg">
+    <img src="images/images/photo14.jpg">
+    <img src="images/images/photo15.jpg">
+    <img src="images/images/photo16.jpg">
+    <img src="images/images/photo17.jpg">
+    <img src="images/images/photo18.jpg">
+</div>
+
+</section>
+
+<div class="lightbox" id="lightbox">
+
+    <button class="close-lightbox">✕</button>
+
+    <img id="lightbox-img" src="" alt="">
+
+</div>
+
+<div id="letter-window">
+
+    <div id="letter-content">
+        
+        
+
+        <button id="close-letter">
+            ✕
+        </button>
+
+        <div class="cover-page">
+
+    <h1>
+        ❤️ Наша история ❤️
+    </h1>
+
+    <p class="subtitle">
+        Письмо для моей любимой
+    </p>
+
+    <div class="cover-line"></div>
+
+    <p class="date">
+        8 июля 2025 — ♾️
+    </p>
+
+    <p class="author">
+        Илья ❤️
+    </p>
+
+    <button id="next-page">
+        Открыть письмо →
+    </button>
+
+</div>
+
+<div class="letter-page" id="letter-page">
+
+    <p>Привет, моя принцесска 🥹🥰</p>
+
+    <p>
+        Раз ты это читаешь — значит, я уже закончил работу над сайтом.
+        Я не знаю, получился ли он у меня таким, каким я его хотел видеть,
+        но я старался, т.к. создавал его для самого любимого человечка
+        🥹🥹🥹🥰🥰🥰
+    </p>
+
+    <p>
+        Мне кажется, что все слова, которые можно было использовать по отношению
+        к нашим чувствам и по отношению лично к тебе, они уже использованы,
+        и остаётся только действиями это проявлять, но при этом есть огромное
+        желание не оставлять и искусство слова, для проявления чувств к тебе,
+        ангелочек мой 🥹😇🥰
+    </p>
+
+    <p>
+        Слава Богу мы уже год как вместе, несмотря на все испытания,
+        все события происходившие за этот год, несмотря даже на расстояние,
+        мы с тобой справляемся с Божьей помощью, и я верю и надеюсь,
+        что так будет и впредь 🥹🥰
+    </p>
+
+    <p>
+        И опять же, прежде всего хочу поблагодарить Бога, за то, что он дал мне тебя,
+        такое сокровище, о котором я не мог и мечтать 🥹😭🥰
+    </p>
+
+    <p>
+        Я понимал какую девушку я хочу, но ты превзошла все ожидания 🥹🥰
+    </p>
+
+    <p>
+        В тебе чудесным образом сочетаются и не земная красота,
+        и огромная эмпатия, и невероятно добрый характер 🥹🥰
+        Ты без преувеличения самая лучшая девушка, которую я когда либо встречал,
+        и следующая девушка которая сможет приблизиться к уровню твоей красоты —
+        это наша дочурка 🥹🥰
+    </p>
+
+    <p>
+        Я знаю, моё солнышко, как тебе тяжело из-за расстояния,
+        как ты страдаешь из-за этого, как порой плачешь 😭😭😭
+    </p>
+
+    <p>
+        Это невыносимо тяжело, я знаю это, и сам больше всего на свете
+        желаю поскорее быть с тобой... 🥹🥰
+    </p>
+
+    <p>
+        Засыпать вместе с тобой обнимая тебя и чувствуя твой чарующий,
+        завораживающий запах, просыпаться рядом с тобой, готовить тебе завтрак,
+        всячески баловать тебя и наслаждаться каждым моментом рядом с тобой...
+        🥹🥹🥹🥹🥰🥰🥰🥰🥰😭😭😭😭😭😭😭
+    </p>
+
+    <p>
+        И я верю, и ни чуть не сомневаюсь, что в скором времени так и будет,
+        даст Бог 🥹🥹🥹😭😭😭😭🥰🥰🥰🥰🥰
+    </p>
+
+    <p>
+        Одно из главных моих желаний, даже нет, не так,
+        одна из главных моих целей — это делать тебя счастливой..
+        Хочу чтоб моя жена была самой счастливой 🥹🥹🥹🥰🥰🥰🥰
+    </p>
+
+    <p>
+        И как вначале наших отношений, идя с завода домой,
+        я тебе говорил в голосовом, что сделаю для этого всё,
+        что в моих силах, так говорю об этом и сейчас,
+        и буду говорить об этом, и естественно доказывать это своими поступками
+        🥰🥰🥰
+    </p>
+
+    <p>
+        На данном этапе я пока не знаю, как это реализовать,
+        но я думаю над этим, учусь, пытаюсь развиваться,
+        чтоб по итогу так всё и было, чтоб я мог дать тебе всё то,
+        что ты пожелаешь, всё, что ты заслуживаешь, милая моя 🥰🥹
+    </p>
+
+    <p>
+        Только представь, что нас с тобой ждёт впереди,
+        какая прекрасная жизнь 🥹🥰
+    </p>
+
+    <p>
+        Жизнь в Испании с красивейшими видами,
+        постоянные путешествия в нашем автодоме,
+        плюс свой дом со временем появится..
+        Стоит тебе только что-то пожелать, и твой зая всё сделает
+        🥰🥰🥰🥰🥰
+    </p>
+
+    <p>
+        А представь, как мы занимаемся делами,
+        я сижу работаю, ты в своей мастерской сидишь рукодельничаешь,
+        и со школы приходит Пётр Ильич, подходит к тебе,
+        целует тебя и говорит:
+    </p>
+
+    <p class="letter-quote">
+        «Мамуль, я тебя очень люблю, ты у меня самая лучшая»
+        🥹🥹🥹🥹🥹🥰🥰🥰🥰🥰🥰
+    </p>
+
+    <p>
+        Даже только представляя это, я испытываю восторг,
+        а когда это станет реальностью..
+        это будет неописуемо, просто великолепно 🥹🥰😭
+    </p>
+
+    <p>
+        Это всё будущее, которое нас ожидает, и даст Бог наступит,
+        у нас же ещё есть прекрасное прошлое,
+        с чудесными воспоминаниями на всю жизнь 🥰🥰🥰
+    </p>
+
+    <p>
+        Вспомни всё, что мы уже пережили,
+        какие невероятные несколько месяцев провели вместе,
+        до моего отъезда, и это всего лишь 1% от того,
+        что нас ожидает в будущем 🥰🥰🥰
+    </p>
+
+    <p>
+        Я никогда не устану благодарить Бога за тебя,
+        ведь ты лучшее, что со мной случалось,
+        самый лучший человечек в моей жизни 🥹🥹🥹🥰🥰🥰
+    </p>
+
+    <p>
+        Я хочу, чтоб наш Петенька, Лерочка и если ещё кого-то Бог пошлёт
+        (их ещё нету, а я их уже люблю 😅🥰🥹),
+        глядя на нас, на наши отношения друг к другу,
+        на то, как я забочусь о тебе —
+        учились любить 🥰🥰🥰🥹🥹🥹🥹🥹🥹
+    </p>
+
+    <p class="letter-final">
+        Обожаю тебя, моя невероятная, неописуемая девочка 🥹😭❤️‍🔥
+    </p>
+
+    <p class="letter-final">
+        Ты — моё всё, помни про это, милая моя 🥰🥰🥰
+    </p>
+
+    <p class="letter-signature">
+        Навеки твой, любимый 🥹🥰❤️‍🔥
+    </p>
+
+</div>
+
+    <button id="back-page">
+        ← Назад
+    </button>
+
+</div>
+
+    </div>
+
+    <section class="final-section">
+
+    <div class="final-content">
+
+        <span class="final-heart">❤️</span>
+
+        <h2>И это только начало…</h2>
+
+        <p class="final-date">08.07.2025</p>
+
+        <p class="final-text">
+            Спасибо, что ты есть у меня.
+        </p>
+
+        <div class="final-infinity">∞</div>
+
+    </div>
+
+</section>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
